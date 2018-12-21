@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style:none;
+        }
+        body{
+            position:relative;
+            background-image:url(images/img-3.jpg);
+        }
+        .login_conter{
+            width:500px;
+            height:300px;
+            background-image: url(images/img-9.jpg);
+            background-size:100% 100%;
+            border-radius: 20px 20px;
+            position: relative;
+            left:50%;
+            top:200px;
+            margin-left:-250px;
+        }
+        .login_conter .account{
+            position: relative;
+            margin:0 auto;
+            top:100px;
+            width:400px;
+            height:200px;
+            color:wheat;
+            font-size:20px;
+            font-weight:bolder;
+        }
+        .login_conter .account .account_content{
+            border:0px;
+            border-radius:16px;
+            height:30px;
+            text-indent:5px;
+            margin:0 auto;
+            background-color:rgba(255,255,255,0.3);
+        }
+        .login_conter .account .passwrod_content{
+            border:0px;
+            border-radius:16px;
+            height:30px;
+            text-indent:5px;
+            margin:0 auto;
+            background-color:rgba(255,255,255,0.3);
+            margin-top:40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_conter">
+        <div class="account">
+            account：<input class="account_content" type="text" value="请输入账号">
+            <p class="account_tip"></p>
+
+            passwrod:<input class="passwrod_content" type="passwrod" value="请输入密码">
+            <p class="passwrod_tip"></p>
+        </div>
+    </div>
+    <script src="DL.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            position: absolute;;
+            width:350px;
+            height:200px;
+            background-color:blanchedalmond;
+            border-radius:16px;
+            left:50%;
+            top:50%;
+            margin-left:-175px;
+            margin-top:-100px;
+        }
+        .normal{
+            width:100px;
+            height:100px;
+            float:left;
+            margin-left:12px;
+            margin-top:50px;
+            text-align:center;
+            font-size: 40px;
+            font-weight:bolder;
+            line-height:100px;
+            border-radius: 16px;
+            background-color:brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="hour"></div>
+        <div class="miutes"></div>
+        <div class="sceond"></div>
+    </div>
+    <script>
+        let wrapper = document.getElementsByClassName("wrapper")[0];
+        var len = wrapper.children.length;
+        let secondBox = wrapper.children[len - 1];
+        let miutesBox =  wrapper.children[len - 2];
+        let hourBox = wrapper.children[len - 3];
+        let timer;
+        var second = 0;
+        var miutes = 0;
+        var hour = 0;
+        var color = [
+            "black",
+            "yellow",
+            "red"
+        ]
+
+        for(var i = 0; i < wrapper.children.length; i++){
+            wrapper.children[i].classList.add('normal');
+            wrapper.children[i].style.color = color[i];
+            wrapper.children[i].innerHTML = '0 0';
+        }
+        
+        timer = setInterval(function (){
+            second++;
+            if(second == 60){
+                second = 0;
+                miutes++;
+            }
+            if(miutes == 60){
+                miutes =0;
+                hour++;
+            }
+            output(secondBox,second);
+            output(miutesBox,miutes);
+            output(hourBox,hour);
+        },1000)
+
+        function output(DOM,num){
+            if(num <= 9){
+                DOM.innerHTML = '0' + num;
+            }else{
+                DOM.innerHTML = num + '';
+            }
+        }
+    </script>
+</body>
+</html>

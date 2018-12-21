@@ -1,0 +1,72 @@
+.wrapper .right_1{
+    position: relative;
+    width:80%;
+    height:100%;
+    left:20%;
+    padding:4em 0;
+    margin-left:90px;
+}
+
+.wrapper .right_1 .classification{
+    position: relative;
+    top:-200px;
+}
+
+.wrapper .right_1 .classification::after{
+    display:block;
+    content: "";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.wrapper .right_1 .inner_class{
+    position: absolute;
+    width:343px;
+    word-break:break-word;
+    background-color:whitesmoke;
+    opacity:0;
+}
+
+.wrapper .right_1 .addanima{
+    animation-name: anima;
+    animation-duration: 2s;
+    opacity:1;
+}
+
+@keyframes anima{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.wrapper .right_1 .inner_class a:hover{
+    animation-name:hiddenPic;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+.wrapper .right_1 .inner_class a p{
+    position: relative;
+    top:-150px;
+    color:saddlebrown;
+    font-size:50px;
+    font-weight: bolder;
+    text-align:center;
+    display:block;
+    font-family: inherit;
+    display:none;
+}
+
+@keyframes hiddenPic{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity:0;
+        display:none;
+    }
+}

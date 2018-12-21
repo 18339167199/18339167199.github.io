@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js轮播图</title>
+        <style type= "text/css">
+            body{background-color:teal;}
+            *{list-style:none; margin:0; padding:0}
+            img{width:550px; height:250px;}
+             .wrapper{
+                 margin:100px auto;
+                 padding:10px;
+                 width:600px;
+                 height:600px;
+                 position:relative;
+                 overflow: hidden;
+            }
+            .wrapper .content{
+                width:550px;
+                height:250px;
+                margin:0 auto;
+                overflow:hidden;
+            }
+            .wrapper .nav{
+                float:right;
+            }
+            .wrapper .nav ol{
+                position:absolute;
+                left:430px;
+                top:230px;
+            }
+            .wrapper .nav ol li{
+                float:right;
+                background-color:rgb(37, 247, 177);
+                font-size:10px;
+                border-radius:50%;
+                text-align:center;
+                padding:0 5px;
+                margin-left:10px;
+            }
+            span{
+                font-size:20px;
+                font-weight:bolder;
+                color:black;
+                opacity:0.3;
+                width:30px;
+                height:80px;
+                background-color:ivory;
+                display:inline-block;
+                text-align:center;
+                line-height:80px;
+                border-radius:10px 10px;
+                z-index:20;
+                position:relative;
+                cursor: pointer;
+            }
+            span:hover{
+                opacity:1;
+            }
+            .left{
+                left:10px;
+                top:150px;
+            }
+            .right{
+                left:525px;
+                top:150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <span class="left"> < </span>
+            <span class="right"> > </span>
+            <div class="content">   
+                <ul>
+                    <li><img src="jiaoben4576/images/1.jpg" alt="图片1"></li>
+                    <li><img src="jiaoben4576/images/2.jpg" alt="图片2"></li>
+                    <li><img src="jiaoben4576/images/3.jpg" alt="图片3"></li>
+                    <li><img src="jiaoben4576/images/4.jpg" alt="图片4"></li>
+                    <li><img src="jiaoben4576/images/5.jpg" alt="图片5"></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <ol>
+                    <li>5</li>
+                    <li>4</li>
+                    <li>3</li>
+                    <li>2</li>
+                    <li>1</li>
+                </ol>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var liList = document.getElementsByTagName('li');
+            var n = 1;
+            
+            setInterval(function (){
+                for(var i=0;i<liList.length/2;i++){
+                    liList[i].style.display = 'none';
+                    liList[i+5].style.backgroundColor = "rgb(37, 247, 177)";
+                }
+                
+                liList[n].style.display = "inline-block";
+                liList[liList.length -n - 1].style.backgroundColor = 'yellow';
+                n++;
+
+                if(n == liList.length/2){
+                    n = 0;
+                }
+
+            },2000);
+        </script>
+        <script>
+     
+        </script>
+    </body>
+</html>

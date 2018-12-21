@@ -1,0 +1,63 @@
+.wrapper .right_3{
+    position: relative;
+    width:80%;
+    height:100%;
+    left:20%;
+    padding:4em 0;
+    margin-left:90px;
+}
+
+.wrapper .right_3 .download{
+    position: relative;
+    width:40%;
+    height:100%;
+    display:inline-block;
+    margin:10px;
+}
+
+.wrapper .right_3 .download .downloadIcon{
+    position: relative;
+}
+
+.wrapper .right_3 .download .downloadIcon img{
+    opacity:0.6;
+    width:44px;
+    height:40px;
+}
+
+.wrapper .right_3 .download .downloadIcon p{
+    display:inline-block;
+    letter-spacing: 2px;
+    font-size:40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:gray;
+}
+
+.wrapper .right_3 .download ul{
+    padding:0 10px;
+    border:1px solid gray;
+    border-bottom:0;
+    background-image: url(shucai/home/img-9.jpg);
+    background-size:100% 100%;
+}
+
+.wrapper .right_3 .download:last-child ul{
+    background-image:url(shucai/home/img-2.jpg);
+}
+
+.wrapper .right_3 .download ul li{
+    height:50px;
+    border-bottom:1px solid gray;
+}
+
+.wrapper .right_3 .download ul li:hover{
+    background-color:white;
+}
+
+/* .wrapper .right_3 .myHistory{
+    position: relative;
+    width:40%;
+    height:100%;
+    border:1px solid black;
+    display:inline-block;
+} */

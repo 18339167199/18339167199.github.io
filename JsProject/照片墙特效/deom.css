@@ -1,0 +1,63 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+    font-size:0;
+}
+
+.wrapper{
+    width:100%;
+    background-color:bisque;
+    position: relative;
+    padding-top:200px;
+    top:100px;
+}
+
+.wrapper .picBox{
+    position: relative;
+    width:500px;
+    height:250px;
+    margin:0 auto;
+    perspective: 700px;
+    transform-style: preserve-3d;
+    transition: 1s;
+    transform: all 1s ease-in;
+}
+
+.wrapper .picBox img{
+    position: relative;
+    transform-style:preserve-3d;
+    width:50px;
+    height:50px;
+}
+
+.wrapper .btn{
+    position: relative;
+    border:1px solid black;
+    border-radius:8px;
+    font-size:14px;
+    width:100px;
+    height:40px;
+    line-height: 40px;
+    text-align:center;
+    font-weight:bolder;
+    background-color:darkolivegreen;
+    margin:50px auto;
+    bottom:20px;
+    cursor: pointer;
+}
+
+@keyframes xun{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+
+.ani{
+    transform-origin: -200%;
+    animation-name:xun;
+    animation-duration: 1s;
+}

@@ -1,0 +1,443 @@
+<!-- <!doctype html>
+<html>
+    <head>
+       <style>
+           .wrapper{
+               margin:5px;
+               padding:10px;
+               width:500px;
+               height:500px;
+               background-color:aliceblue;
+               border:1px solid;
+           }
+           .wrapper div{
+               display:none;
+               float:left;
+               margin-top:10px;
+               width:100px;
+               height:100px;
+               border:1px solid red;
+           }
+          .active{
+              background-color:yellow;
+          }
+       </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <button>按钮1</button>
+            <button>按钮2</button>
+            <button>按钮3</button>
+            </br>
+            <div >111</div>
+            <div >222</div>
+            <div >333</div>
+        </div>
+        <script>
+            var btu = document.getElementsByTagName('button');
+            var div = document.getElementsByTagName('div');
+            
+            for(var i=0;i<btu.length;i++){
+
+                (function (n) {
+                    btu[n].onclick = function () {
+                    for(var j=0;j<btu.length;j++){
+                        btu[j].className = "";
+                        div[j+1].style.display = "none";
+                    }
+                    this.className = "active";5
+                    div[n+1].style.display = "inline-block";
+                }
+                }(i))
+
+            }
+            /*
+            var div=document.getElementsByTagName('div')[0];
+            div.style.height = "100px";
+            div.style.width = "100px";
+            div.style.backgroundColoer = "red";
+
+            var count=0;
+            div.onclick = function () {
+                count++;
+
+                if (count % 2 == 1){
+                    this.style.backgroundColor = 'green';
+                    this.style.width = '200px';
+                    this.style.height = "200px";
+                    this.style.borderRadius = "50%";
+                }else{
+                    this.style.backgroundColor = 'red';
+                    this.style.width = '100px';
+                    this.style.height = "100px";
+                    this.style.borderRadius = "25%";
+                }
+            }
+            */
+
+
+
+        </script>
+    </body>
+</html> -->
+<!--选项卡功能 -->
+
+
+
+
+
+
+<!--小方块的运动-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var div = document.createElement('div');
+
+            document.body.appendChild(div);
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.position = "absolute";
+            div.style.backgroundColor = "red";
+            div.style.left = "0px";
+            div.style.top = "0px";
+
+            var timer = setInterval(function (){
+                div.style.left = parseInt(div.style.left) + 1 + "px";
+                div.style.top = parseInt(div.style.top) + 1 + "px";
+
+                if (parseInt(div.style.left) > 200 && parseInt(div.style.top) > 200)
+                    clearIntervals(timer);
+            }, 100);
+        </script>
+    </body>
+</html> -->
+
+
+
+
+<!-- 键盘控制的方块移动 -->
+<!-- <html>
+    <head>
+        <style>
+            .btu{
+                z-index:100;
+                background-color:aqua;
+                height:30px;
+                width:50px;
+                text-align:center;
+                font-size:10px;
+                line-height:20px;
+                position:absolute;
+                top:0;
+                left:200px;
+            }
+            .posi{
+                position:absolute;
+                top:0;
+                left:300px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="btu">加速</button>
+        <button class="posi">重置</button>
+        <script>
+            var div = document.createElement('div');
+
+            document.body.appendChild(div);
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.position = "absolute";
+            div.style.backgroundColor = "red";
+            div.style.left = "0px";
+            div.style.top = "0px";
+            var speed = 5;
+            var btu = document.getElementsByTagName('button')[0];
+            var btu2 = document.getElementsByTagName('button')[1];
+            
+            btu2.onclick = function (){
+                speed = 5;
+            }
+
+            btu.onclick = function (){
+                speed = speed + 2;
+            }
+
+            document.onkeydown = function (e){
+                switch(e.which){
+                    case 87:
+                       div.style.top = parseInt(div.style.top) - speed + "px";
+                       break;
+                    case 83:
+                       div.style.top = parseInt(div.style.top) + speed + "px";
+                       break;
+                    case 65:
+                       div.style.left = parseInt(div.style.left) - speed +"px";
+                       break;
+                    case 68:
+                       div.style.left = parseInt(div.style.left) + speed + "px";
+                }
+
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<htmlv lang='en'1>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <span></span>
+            <em></em>
+            <div>
+                <strong></strong>
+                <em></em>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var div = document.getElementsByTagName('div')[0];
+            var temp = {
+                length : 0,
+                push : Array.prototype.push,
+                splice : Array.prototype.splice
+            },
+            child = div.childNodes,
+            len = child.length;
+            for(var i=0;i<len;i++){
+
+                if(child[i].nodeType == 1){
+                    temp.push(child[i]);
+                }
+            }
+
+
+        </script>
+    </body>
+</html> -->
+
+
+
+
+<!-- <html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            /*找出elem的第n祖先*/
+            function retParent (elem,n){
+                 while(n && elem){
+                    elem = elem.parentElement;
+                    if(elem = null){
+                        return null;
+                    }
+                    n--;
+                 }
+                 return elem;
+            }
+             
+             /*实现自己的muChildren方发找出elem的孩子节点*/
+            Element.prototype.myChildren = function (){
+                var child = this.childNodes;
+                var len = child.length;
+                var arr = [];
+
+                for(var i=0;i<len;i++){
+                    if(child[i].nodeType == 1){
+                        arr.push(child[i]);
+                    }
+                }
+
+                return arr;
+            }
+
+           /*返回e的第n个兄弟结点*/
+            function retSibling(e,n){
+                while(n && e){
+
+                    if(n > 0){
+                        if(0 && e.nextElementSibling){
+                             e = e.nextElementsibling;
+                        }else{
+                            for(e = e.nextSibling;e && e.nodeType != 1;e = e.nextSibling)
+                        }
+                        n--;
+                    }else{
+                        if(e.previousElementSibling){
+                            e = e.previousElementSibling;
+                        }else{
+                            for(e = e.previousSibling;e && e.nodeType != 1;e=e.previousSibling)
+                        }
+                        n++;                    }
+                }
+
+                return e;
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!-- 
+<html>
+    <head>
+        <style>
+             input{
+                 border:0;
+                 line-height:10px;
+                 font-size:10px;
+                 padding-left:20px;
+             }
+        </style>
+    </head>
+    <body>
+        miuntes:<input type="text" value="0">
+        seconds:<input type="text" value="1">
+        <script>
+             var miuntesNode = document.getElementsByTagName("input")[0];
+             var secondsNode = document.getElementsByTagName("input")[1];
+             var miuntes = 0;
+             var seconds = 0;
+
+             var timer = setInterval(function (){
+                 seconds++;
+                 if(seconds == 60){
+                     seconds = 0;
+                     miuntes++;
+                 }
+
+                 secondsNode.value = seconds;
+                 miuntesNode.value = miuntes;
+
+                 if(miuntes == 3){
+                     clearInterval(timer);
+                 }
+             },1000);
+        </script>
+    </body>
+</html> -->
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="www.baidu.com">baidu</a>
+    <p>This page turns violet when you hold the V key</p>
+    <script>
+        document.onkeydown = function (e){
+            console.log(e);
+            if(e.which == 66){
+                document.body.style.backgroundColor = 'blue';
+            }
+        }
+        // addEventListener("keydown",function (event){
+        //     if(event.keycode == 86){
+        //          document.body.style.backgroundColor = "black";
+        //     }
+        // });
+        // addEventListener("keyup",function (event){
+        //     if(event.keycode == 86){
+        //         document.body.style.backgroundColor ="blue";
+        //     }
+        // });
+
+
+        var a = document.querySelector('a');
+        a.addEventListener("click",function (event){
+            console.log("Nope!");
+            event.preventDefault();
+        });
+
+
+        /*封装兼容获取可视窗口的长宽 getViewportOfset*/
+        function getViewportOfset (){
+            if(window.innerWidth){
+                return{
+                    W : window.innerWidth,
+                    h : window.innerHeight
+                }
+            }else{
+                if(document.compatMode == "BackCompat"){
+                    return {
+                        w : document.body.clientWidth,
+                        h : document.body.clientHeight
+                    }
+                }else{
+                        return {
+                            w : document.documentElement.clientWidth,
+                            h : document.documentElement.clientHeight
+                        }
+                    }
+            }
+        }
+
+    </script>
+</body>
+</html> -->
+
+
+<!-- <script>
+    /*封装获取指定元素的指定属性*/
+        function getStyle (elem,prop){
+            if(window.getComputedStyle){
+                return window.getComputedStyle(elem,null)[prop];
+            }else{
+                return elem.currentStyle[prop];
+            }
+        }
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style = "width:100px;heigth:100px;background:aquamarine"></div>
+</body>
+</html>

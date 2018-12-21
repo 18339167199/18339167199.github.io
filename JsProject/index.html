@@ -1,0 +1,357 @@
+<script>
+/*
+function reverse() {
+    var num =window.prompt("input");
+    var str=""; 
+    for(var  i=num.length-1;i>=0;i--){
+       str+=transfer(num[i]);
+    }
+    document.write(str);
+}
+
+function transfer(target){
+      switch(target){
+            case"1":
+               return"一";
+               break;
+            case"2":
+               return"二";
+               break;
+            case"3":
+               return"三";
+               break;
+      }
+}
+reverse();
+transfer(str);
+*/
+
+/*
+function JC(n) {
+    if(n==1)
+       return 1;
+    return n*JC(n-1);
+}
+var i;
+i=JC(5);
+document.write(i+"\n");
+i=JC(1);
+document.write(i+"\n");
+i=JC(2);
+document.write(i+"\n");
+i=JC(3);
+document.write(i+"\n");
+i=JC(4);
+document.write(i+"\n");
+*/
+
+/*
+function FPNQ(n) {
+    var arr1,arr2;
+    arr1=arr2=1;
+    var a;
+    document.write(arr1+" "+arr2+" ");
+    for(var i=0;i<n;i++){
+        a=arr1+arr2;
+        arr1=arr2;
+        arr2=a;
+        document.write(a);
+        document.write("\n"); 
+    }
+}
+var m=window.prompt('input');
+FPNQ(m);
+*/
+/*
+function fb(n) {
+    if(n==1 || n==2)  return 1;
+    return fb(n-1)+fb(n-2);  
+}
+
+document.write (fb(2),fb(3),fb(4),fb(5));
+*/
+/*数组乱序
+var arr=[1,2,3,4,5,6,7];
+decument.write(arr[2]);
+arr.sort( function(){
+    return Math.random()-0.5;
+});
+
+for(var i=0;i<arr.length;i++){
+    decument.write(arr[i]);
+}
+*/
+/*
+var cheng={
+    name:"cheng",
+    age:18,
+    sex:"male",
+    face:"handsome"
+}
+
+var zhang={
+    name:"zhang",
+    sex:"male",
+    age:20
+}
+
+var deng={
+    name:"deng",
+    age:40,
+    sex:undefined,
+    face:"amazing"
+}
+
+var arr=[cheng,deng,zhang];
+arr.sort(function (a,b) {
+    return b.age-a.age;
+});
+
+var arr=["ad","dasfa","fxcsxa","sfsxva","dsagaxdcsaca","adssafsa","sdascsdsadaaa"];
+arr.sort(function (a,b){
+    return a.length-b.length;
+})
+
+function retBytes(str){
+
+    var num=str.length;
+    for(var i=0;i<str.lenght;i++){
+        if(str.charCodeAt[i]>255)
+            num++;
+    }
+return num;
+}
+
+
+var arr=["afsaf","asddafsa多大点事","ada打开","sdsasvxa","的撒查实的萨达","dasdsa的撒女","dsdz上的"];
+arr.sort(function (a,b) {
+    return retBytes(a)-retBytes(b);
+});
+*/
+
+
+/*
+var str="adsdsada";
+var str1="sdada";
+var str2="jumghsa";
+var str3="sdsafad";
+var str4="sdagakld";
+var str5="sdasakfk";
+var str6="dsafakka";
+var strFianl;
+var arr = [str,str1,str2,str3.str4,str5,str6];
+strFinal=arr.join();
+*/
+
+/*深度克隆
+function deepClone(target,origin){
+        var target=target||{},
+            toStr=Object.prototype.toString,
+            arrStr="[object Array]";
+
+        for(var prop in origin){
+            if(origin.hasOwnProperty(prop)=='object'){
+                 if(oringin[prop]!=="null" && typeof(origin[prop])=='object'){
+                     if(toStr.call(origin[prop])==arrStr){
+                        target[prop]=[];
+                     }
+                     else{
+                         target[prop]={};
+                     }
+                     deepClone(target[prop],origin[prop]);
+                 }
+                 else{
+                     target[prop]=origin[prop];
+                 }
+            }
+        }
+        return target;
+    }
+
+
+var obj={
+    name:"adsad",
+    sex:"male",
+    wrok:{
+        aperament:5,
+        day:52,
+        num:12
+    },
+    card:[1,2,3,4,5,6]
+}
+
+var obj1;
+obj1=deepClone(obj,obj1);
+*/
+
+/*myTypeof
+
+function myTypeof(target){
+
+    var template={
+        "[object Array]":"array",
+        "[object Object]":"object",
+        "[object Number]":"number - object",
+        "[object Boolean]":"boolean - object",
+        "[object String]":"string - object"
+    }
+
+    if(target==null){
+        return null;
+    }
+
+    if(typeof(target)=="object"){
+        var str = Object.prototype.toString.call(target);
+        return template[str];
+    }
+    else{
+        return typeof(target);
+    }
+}*/
+
+
+
+/*数组去重
+var arr=[1,1,2,5,5,8,4,7,7,9,6];3
+Array.prototype.unique=function (target) {
+    target.sort();
+    var newArr=[];
+
+    for(var i=0;i<target.length;i++){
+        if(target[i] != target[i+1])
+            newArr.push(target[i]);
+    }
+    return newArr;
+}
+
+var arr2=Array.prototype.unique(arr);
+*/
+
+/*利用对象实现数组去重(在原型链上的编程)
+Array.prototype.objunique = function () {
+
+    var temp = {};
+    var arr = [];
+    len=this.length;
+
+    for(var i=0;i<len;i++){
+        if( !temp[this[i]] ){
+            temp[this[i]]="abc";
+            arr.push(this[i]);
+        }
+    }
+
+    return arr;
+}
+*/
+
+
+
+/*利用对象实现数组的去重(一般方法)
+function unique(target) {
+     var temp={};
+     var arr=[];
+     var len=target.length;
+
+     for(var i=0;i<len;i++) {
+         if( !temp[target[i]] ) {
+             temp[target[i]]="abc";
+             arr.push(target[i]);
+         }
+     }
+
+     return arr;
+}
+
+var arr=[1,1,2,2,3,4,1,2,9,5,9,8,7,8,7,4,5,6,2,6];
+var arr1=unique(arr);
+*/
+
+/*闭包的使用（数据的私有化，外部无法访问）
+function Preson(name) {
+    var money=100;//外部无法访问
+    this.name=name;//外部可以访问
+    this.makeMoney = function () {
+        money++;
+    }
+    this.offer = function () {
+        money--;
+    }
+}
+
+var person = new Preson("xiaoling");
+var person1 = new Preson("xiaohuang");
+*/
+
+
+
+/*完美继承（圣杯模式）
+var inherit = (function () {
+
+    var F = function () {};
+    return function(Target, Origin) {
+        F.prototype = Origin.prototype;
+        Target.prototype = new F();
+    }
+
+}());
+*/
+
+
+
+
+/*
+function returnDate (date) {
+
+    var arr = ["yi","er","san","si","wu","liu","qi"];
+    var ret = arr[date-1];
+    if(ret == undefined){
+        return error;
+    }else{
+        return ret;
+    }
+}
+*/
+
+
+
+
+
+// function retTheFirstApperan (target){
+//     var wordArr = [];
+//     var ture = 0;
+//     for(var i=0;i<target.length;i++){
+//         for(var j=0;j<target.length;j++){
+//             if(i == j)  continue;
+//             if(target[i] == target[j]){
+//                 ture = 1;
+//                 break;
+//             }
+//         }
+
+//         if(ture == 0){
+//             wordArr.push(target[i]);
+//         }else{
+//             ture = 0;
+//         }
+
+//     }
+//     return wordArr;
+
+// }
+
+// var str = "aaddffvcgafge";
+// var str1 = retTheFirstApperan(str);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

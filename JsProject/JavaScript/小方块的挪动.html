@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charste="utf-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div style="width:100px;height:100px; background-color: aquamarine;position: absolute;left:0;top:0;"></div>
+    <script>
+        function drag (elem){
+            var disX,disY;
+            elem.onmousedown = function (e){
+                disX = e.pageX - parseInt(elem.style.left);
+                disY = e.pageY - parseInt(elem.style.top);
+
+                document.onmousemove = function (e){
+                    elem.style.left = e.pageX - disX +'px';
+                    elem.style.top = e.pageY - disY + 'px';
+                }
+
+                document.onmouseup = function (){
+                    document.onmousemove = null;
+                }
+            }
+        }
+        var div = document.getElementsByTagName('div')[0];
+        drag(div);
+
+
+        // var key = false;
+        // var firstTime = 0;
+        // var lastTime = 0;
+        // document.onmousedown = function (){
+        //     firstTime = new Date().getTime();
+
+        //     div.onmousemove = function (){
+        //         drag(div);
+        //     }
+        // }
+
+        // document.onmouseup = function (){
+        //     lastTime = new Date().getTime();
+        //     if(lastTime - firstTime < 300){
+        //         key = true;
+        //     }
+        // }
+
+        // span.onclick = function (){
+        //     if(key == true){
+        //         console.log("Hello");
+        //         key = false;
+        //     }
+        // }
+    </script>
+</body>
+</html>

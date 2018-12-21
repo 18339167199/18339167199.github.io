@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            JS求五本书的平均最小最大价格
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var a=0;
+
+            function avg(){
+                var BookPrice = new Array();
+                BookPrice[0]=Number(document.BookP.number1.value);
+                BookPrice[1]=Number(document.BookP.number2.value);
+                BookPrice[2]=Number(document.BookP.number3.value);
+                BookPrice[3]=Number(document.BookP.number4.value);
+                BookPrice[4]=Number(document.BookP.number5.value);
+                /*求平均*/
+               for(var i=0;i<5;i++){
+                   a=BookPrice[i]+a;
+                   if(i == 4){
+                       a=a/5;
+                   }
+               }
+              document.BookP.number6.value=a;
+              /*求最小*/
+              a=BookPrice[0];
+              for(i=1;i<5;i++){
+                  if(a>BookPrice[i]){
+                      a=BookPrice[i];
+                  }
+              }
+              document.BookP.number8.value=a;
+              /*求最大*/
+              a=BookPrice[0];
+              for(i=1;i<5;i++){
+                  if(a<BookPrice[i]){
+                      a=BookPrice[i];
+                  }
+              }
+              document.BookP.number7.value=a;
+              a=0;
+            }
+
+        </script>
+        <form name="BookP">
+            第一本书的价格：<input name="number1" type="text"><br/>
+            第二本书的价格：<input name="number2" type="text"><br/>
+            第三本书的价格：<input name="number3" type="text"><br/>
+            第四本书的价格：<input name="number4" type="text"><br/>
+            第五本书的价格: <input name="number5" type="text"><br/>
+            <input type="button" onclick="avg()" value="确定"><br/>
+            平均价格：<input name="number6" onclick="avg()" type="text"><br/>
+            最高价格：<input name="number7" type="text"><br/>
+            最低价格：<input name="number8" type="text"><br/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,248 @@
+*{padding:0; margin:0; list-style:none;}
+.up{
+    position: relative;
+    width:100%;
+    height:520px;
+    background-color:#333;
+}
+
+.up .search{
+    position: relative;
+    width: 100%;
+    height:100px;
+    z-index: 999;
+}
+
+.up .search .youku{
+    height:24px;
+    margin-top:25px;
+    margin-left:70px;
+    float:left;
+}
+
+.up .search .search_box{
+    height:38px;
+    margin:18px;
+    position: absolute;
+    left:700px;
+    float:left;
+}
+
+.up .search .search_box input{
+    height:38px;
+    width:415px;
+    border-top-left-radius: 19px;
+    border-bottom-left-radius: 19px;
+    background-color:rgba(255,255,255,0.3);
+    border:0 none;
+    font-size:14px;
+    line-height:22px;
+    color:#fff;
+    text-indent: 20px;
+
+}
+
+.up .search .search_box a{
+    position: absolute;
+    width:20px;
+    height:20px;
+    top:6px;
+    left:375px;
+}
+
+.up .search .search_box button{
+    position: absolute;
+    top:0px;
+    left:415px;
+    width:80px;
+    height:38px;
+    background: linear-gradient(to left,#3b9eff 0,#19c3ff 100%);
+    color:#fff;
+    font-size:13px;
+    line-height:38px;
+    border:0;
+    border-top-right-radius: 19px;
+    border-bottom-right-radius: 19px;
+    cursor: pointer;
+}
+
+.up .up_img{
+    overflow: hidden;
+    width:100%;
+    height:520px;
+    position: absolute;
+    top:0;   
+}
+
+.up .up_img .up_img_box ul li a{
+    display:block;
+    width:100%;
+    height:520px;
+}
+
+.up .up_img .up_img_box img{
+    height:520px;
+    width:100%;
+}
+
+.up .nav{
+    position: relative;
+    left:1600px;
+    top:10px;
+    z-index: 999;
+}
+.up .nav ul{
+    position: absolute;
+    width:220px;
+    margin:10px 0;
+    background-color:rgba(32,32,32,0.65);
+    /* opacity: 0.6; */
+}
+
+.up .nav ul li{
+    height:44px;
+    margin:0px 10px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    display:block;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.up .nav ul li:last-child{
+    border:0;
+}
+
+.up .nav ul .navliwhite_space{
+    white-space: normal;
+    text-overflow:clip;
+    height:70px;
+}
+
+.up .nav ul li a span{
+    color:#fff;
+    display:inline-block;
+    font-size:14px;
+    line-height:22px;
+    text-decoration: none;
+}
+.up .nav ul li a{
+    display:block;
+    margin-top:10px;
+    text-decoration: none;
+}
+
+.up .kefuImg{
+    position: fixed;
+    display:block;
+    margin:0 auto;
+    cursor: pointer;
+    width:53px;
+    height:57px;
+    background-image: url(images/KeFu1.png);
+    background-size:100% 100%;
+    left:96%;
+    top:86%;
+}
+.up .kefuImg:hover{
+    background-image: url(images/KeFu2.png);
+    background-size:100% 100%;
+}
+
+.up .person{
+    position: relative;
+    display:block;
+    height:70px;
+    float:right;
+    right:100px;
+    top:15px;
+}
+
+.up .person::after{
+    content:".";
+    display:block;
+    height:0;
+    visibility: hidden;
+    clear: both;
+}
+
+.up .person .personInfo{
+    width:40px;
+    height:70px;
+    margin-bottom:0;
+    position: relative;
+    display:inline-block;
+    margin-right:10px;
+}
+
+.up .person .personInfo a{
+    display:inline-block;
+    text-decoration: none;
+    color:#fff;
+    font-size:12px;
+    text-align:center;
+}
+
+.up .person .personInfo .yellw{
+    color:#ffce07;
+}
+
+.up .person .personInfo a img{
+    display:block;
+    margin:0 auto;
+}
+
+.navigation{
+    position: relative;
+    width:1740px;
+    margin:0 auto 28px;
+}
+.navigation .navigation_ul{
+    display:inline-block;
+    position: absolute;
+    padding-bottom: 200px;
+}
+
+.navigation .navigation_ul li{
+    display:block;
+    position: relative;
+    margin-right:28px;
+    float:left;
+    height:48px;
+    border-right:2px solid gray;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+.navigation .navigation_ul li:last-child{
+    border:0;
+}
+
+.navigation .navigation_ul li span{
+    display:inline-block;
+    position: relative;
+    text-align:left;
+    width:72px;
+    margin-bottom: 9px;
+}
+
+.navigation .navigation_ul li span a{
+    text-decoration: none;
+    color:#666;
+    font-size:14px;
+}
+.navigation .navigation_ul li span a:hover{
+    color:#19c3ff;
+}
+
+.navigation .navigation_ul li span a img{
+    display:block;
+    margin-left:15px;
+}
+
+.navigation .navigation_ul .navImg_li{
+    margin-left:65px;
+}

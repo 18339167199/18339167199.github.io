@@ -1,0 +1,113 @@
+*{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+}
+
+.wrapper{
+    height:1000px;
+    width:100%;
+    position: fixed;
+    left:0px;
+    top:0px;
+    background-image: url(img/cai.jpg);
+    background-size:100% 100%;
+}
+
+.btn{
+    height:70px;
+    width:180px;
+    border:2x solid black;
+    border-radius:30px 30px;
+    background-color:darkkhaki;
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+    font-weight:bolder;
+    position: absolute;
+    left:50px;
+    top:50px;
+    cursor: pointer;
+}
+.box{
+    height:500px;
+    width:500px;
+    transform: perspective(800px) rotateX(45deg);
+    margin:20px auto;
+    border-top:1px solid #b25f27;
+    border-right:1px solid #b25f27;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    display:none;
+}
+.flagBox{
+    position: absolute;
+    top:50px;
+    left:45%;
+    font-size:20px;
+    text-align:center;
+    font-weight: bolder;
+    color:brown;
+    display:none;
+}
+
+.alertBox{
+    display:none;
+    position: absolute;;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0px;
+    background-color:rgba(0,0,0,0.2);
+}
+
+.alertImg{
+    width:600px;
+    height:400px;
+    background-size:100% 100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+.close{
+    width:40px;
+    height:40px;
+    background-image: url(img/gb.jpg);
+    background-size:100% 100%;
+    position: absolute;
+    top:0;
+    right:0px;
+    cursor:pointer;
+}
+
+.block{
+    width:49px;
+    height:49px;
+    border-right:1px solid #b25f27;
+    border-bottom:1px solid #b25f27;
+    box-shadow:0 0 4px #333 inset;
+    background-image:url(img/c.jpg);
+    background-size:100% 100%;
+    float:left;
+}
+
+.show{
+    background-image: url(img/lei.png);
+    background-size:100% 100%;
+}
+
+.num{
+    background:navajowhite;
+    font-size:20px;
+    text-align:center;
+    line-height:49px;
+    color:brown;
+}
+
+.flag{
+    background-image: url(img/lei.png);
+    background-size:100% 100%;
+}

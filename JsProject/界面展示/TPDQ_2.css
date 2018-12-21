@@ -1,0 +1,63 @@
+.wrapper .right_2{
+    position: relative;
+    width:80%;
+    height:100%;
+    left:20%;
+    padding:4em 0;
+    margin-left:90px;
+}
+
+.wrapper .right_2 .myFavorite{
+    position: relative;
+    width:40%;
+    height:100%;
+    display:inline-block;
+    margin:10px;
+}
+
+.wrapper .right_2 .myFavorite .myFavoriteIcon{
+    position: relative;
+}
+
+.wrapper .right_2 .myFavorite .myFavoriteIcon img{
+    opacity:0.6;
+    width:44px;
+    height:40px;
+}
+
+.wrapper .right_2 .myFavorite .myFavoriteIcon p{
+    display:inline-block;
+    letter-spacing: 2px;
+    font-size:40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:gray;
+}
+
+.wrapper .right_2 .myFavorite ul{
+    padding:0 10px;
+    border:1px solid gray;
+    border-bottom:0;
+    background-image: url(shucai/home/img-7.jpg);
+    background-size:100% 100%;
+}
+
+.wrapper .right_2 .myFavorite:last-child ul{
+    background-image:url(shucai/home/img-8.jpg);
+}
+
+.wrapper .right_2 .myFavorite ul li{
+    height:50px;
+    border-bottom:1px solid gray;
+}
+
+.wrapper .right_2 .myFavorite ul li:hover{
+    background-color:white;
+}
+
+/* .wrapper .right_2 .myHistory{
+    position: relative;
+    width:40%;
+    height:100%;
+    border:1px solid black;
+    display:inline-block;
+} */

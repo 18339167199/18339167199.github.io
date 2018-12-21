@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+}
+.wrapper{
+    margin:150px auto;
+    width:400px;
+    height:600px;
+    border:1px solid #222;
+    position: relative;
+    overflow: hidden;
+}
+#go{
+    width:100%;
+    position: absolute;
+    top:0;
+    text-align: center;
+    z-index:99;
+}
+
+#go a{
+    display:block;
+    height:100px;
+    width:400px;
+    color:cyan;
+    background-color: #fff;
+    text-decoration: none;
+    border-bottom:3px dashed #eee;
+    font-size:60px;
+    font-weight:300;
+}
+#main{
+    width:400px;
+    height:600px;
+    position: relative;
+    top:-150px;
+    /* border:1px solid black; */
+}
+.row{
+    width:400px;
+    height:150px;
+}
+.row div{
+    width:99px;
+    height:149px;
+    border-left:1px solid #222;
+    border-bottom:1px solid #222;
+    float: left;
+    cursor: pointer;
+}

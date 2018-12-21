@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #part{
+            width: 640px;
+            height: 340px;
+            border: 1px solid #000;
+            margin: 200px auto;
+        }
+        #part #anniu{
+            width:600px;
+            margin:15px auto;
+            margin-bottom: 30px;
+        }
+        #part #txt{
+            width:600px;
+            margin: 0 auto;
+        }
+        #part #anniu .ipn1,#part #anniu .ipn3{
+            width: 200px;
+            height: 24px;
+        }
+        #part #anniu .ipn2,#part #anniu .ipn4,#part #anniu .ipn5{
+            width: 50px;
+            height: 30px;
+        }
+        #part #txt p span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="part">
+            <div id="anniu">
+                <input type="text" class="ipn1" name="sousuo"/>
+                <input type="submit" class="ipn2" value="搜索"/>
+                <input type="text" class="ipn3" name="tuhuan"/>
+                <input type="submit" class="ipn4" value="替换"/>
+                <input type="submit" class="ipn5" value="重置"/>
+            </div>
+            <div id="txt">
+                <p>&nbsp&nbsp&nbsp&nbsp张家界是湖南省辖地级市，原名大庸市，辖2个市辖区（永定区、武陵源区）、2个县（慈利县、桑植县）。位于湖南西北部，澧水中上游，属武陵山区腹地。[1] 张家界因旅游建市，是中国最重要的旅游城市之一，是湘鄂渝黔革命根据地的发源地和中心区域。</p>
+                <p>&nbsp&nbsp&nbsp&nbsp1982年9月，张家界国家森林公园成为中国第一个国家森林公园。</p>
+                <p>&nbsp&nbsp&nbsp&nbsp1988年8月，张家界武陵源风景名胜区被列入国家重点风景名胜区；1992年，由张家界国家森林公园等三大景区构成的武陵源风景名胜区被联合国教科文组织列入《世界自然遗产名录》；2004年2月，被列入全球首批《世界地质公园》；2007年，被列入中国首批国家5A级旅游景区。[2]</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let oInput = document.getElementsByTagName("input"),
+            oText = document.querySelector("#part #txt"),
+            text = oText.innerHTML;
+            text1 = oText.innerHTML;
+        oInput[1].onclick = function(){
+            let str = oInput[0].value;
+            //let text1 = text.split(str);
+            //console.log(text);
+            if(str){
+                oText.innerHTML = text.split(str).join(`<span>${str}</span>`);
+            }
+            //console.log(text);
+        }
+        oInput[3].onclick = function(){
+            let str1 = oInput[0].value;
+            let str2 = oInput[2].value;
+            if(str1 && str2){
+                oText.innerHTML = text.split(str1).join(`${str2}`);
+                text = oText.innerHTML;
+            }
+        }
+        oInput[4].onclick = function(){
+            oText.innerHTML = text1;
+            oInput[0].value = "";
+            oInput[2].value = "";
+        }
+    </script>
+</body>
+</html>

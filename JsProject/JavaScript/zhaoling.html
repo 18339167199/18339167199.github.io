@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	  <title></title>
+  </head>
+  <body>
+			<form name="BD">
+					输入找零金额:<input type="text" name="number"><br/>
+          <input type="button" onclick="zhaoling()" value="确认">
+				</form>
+     <script type="text/javascript">
+	   function zhaoling(){
+			 var a;
+			 a=Number(document.BD.number.value);
+	      for(var i=0;i<5;i++)
+		     for(var j=0;j<2;j++)
+			    for(var t=0;t<2;t++)
+				   for(var u=0;u<3;u++)
+				    for(var p=0;p<2;p++)
+					    if(i*50+j*20+t*10+u*5+p*1 == a){
+						     document.writeln("50元"+p+"张");
+                 document.writeln("20元"+u+"张");
+						     document.writeln("10元"+t+"张");
+						     document.writeln("5元"+j+"张");
+						     document.writeln("1元"+i+"张");
+								 return;
+						 }
+		 }
+	 </script>
+  </body>
+</html>

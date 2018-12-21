@@ -1,0 +1,172 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+    font-family: "Roboto", Arial, sans-serif;
+    text-decoration:none;
+}
+
+.wrapper{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+.wrapper .left{
+    width:20%;
+    position: fixed;
+    bottom:0;
+    top:0;
+    left:0;
+    overflow-y:scroll;
+    z-index:1001;
+    transition:0.5s;
+}
+.wrapper .left  h1{
+    color:#000;
+    font-size:38px;
+    font-weight:700;
+    text-align:center;
+    margin-top:50px;
+}
+.wrapper .left .nav{
+    margin-top:80px;
+    text-align:center;
+    font-family:"Roboto", Arial, sans-serif;
+}
+
+.wrapper .left .nav ul li{
+    font-weight:bold;
+    font-size:13px;
+    /* letter-spacing: 2px; */
+    color:rgba(0, 0, 0, 0.9);
+    display:block;
+    margin-top:30px;
+}
+
+.wrapper .left .nav ul li a{
+    color:rgba(0, 0, 0, 0.9);
+    letter-spacing: 2px;
+}
+
+.wrapper .left .nav ul li a:hover{
+    text-decoration: underline;
+    color:darkcyan;
+}
+
+.wrapper .footer{
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    text-align:center;
+    margin-top:450px;
+    color:rgba(0, 0, 0, 0.6);
+    padding:0 20px;
+}
+
+.wrapper .footer p{
+    margin-left:50px;
+    display:block;
+    width:250px;
+}
+
+.wrapper .footer a{
+    color:#228896;
+}
+
+.wrapper .right{
+    position: relative;
+    width:80%;
+    height:100%;
+    left:20%;
+    padding:4em 0;
+    margin-left:90px;
+}
+
+.wrapper .right .innerPic{
+    float:left;
+    margin-right:20px;
+    width:343px;
+    word-break:break-word;
+    background-color:whitesmoke;
+    margin-bottom:20px;
+    opacity:0;
+}
+
+.wrapper .right .addanimation{
+    animation-name:dispper;
+    animation-duration: 4s;
+    opacity:1;
+    left:-50px;
+}
+
+/* .wrapper .right .addmove{
+    animation-name:move;
+    animation-duration: 4s;
+    left:-50px;
+} */
+
+.wrapper .right h2{
+    font-size:18px;
+    margin-bottom:2em;
+    font-weight:500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.wrapper .right .innerPicBox{
+    position: relative;
+}
+
+.wrapper .right .innerPicBox .innerPic{
+    position: relative;
+}
+
+.wrapper .right .innerPic .text{
+    text-align:left;
+    margin:20px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size:14px;
+}
+
+.wrapper .right .innerPic .text a{
+    display:block;
+    color:#000;
+    letter-spacing: 1px;
+}
+
+.wrapper .right .innerPic .text a:last-child{
+    margin-bottom:50px;
+    margin-top:20px;
+}
+
+.wrapper .right .innerPic .text p{
+    margin-bottom:15px;
+    color:rgba(0, 0, 0, 0.5);
+}
+
+.foot{
+    border:1px solid black;
+    position: relative;
+  
+}
+
+@keyframes dispper{
+    from{
+        opacity:0;
+        left:0;
+    }
+    to{
+        opacity:1;
+        left:-50px;
+    }
+}
+
+/* @keyframes move{
+    from{
+        left:0px;
+    }
+    to{
+        left:-50px;
+    }
+} */

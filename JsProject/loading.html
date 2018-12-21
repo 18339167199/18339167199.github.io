@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding:0px;
+        margin:0px;
+        list-style:none;
+    }
+    @keyframes t{
+        from{
+            left:0;
+        }
+        to{
+            left:-100%;
+        }
+    }
+    .box{
+        display: block;
+        position:absolute;
+        left:0;
+        top:0;
+        width:200%;
+        height:100%;
+        border:1px solid;
+        animation:t;
+        background-image: linear-gradient(45deg,blue,red,yellow);
+        animation-duration: 5s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .loadingBox{
+        z-index: 999;
+        width:300px;
+        height: 100px;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-150px;
+        margin-top:-50px;
+    }
+    .loadingBox span{
+        font-size:55px;
+        color:azure;
+        font-weight:bolder;
+        text-align:center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        display:block;
+        margin:30px auto;
+    }
+
+    @keyframes dispper{
+        from{
+            opacity:0;
+        }
+        to{
+            opacity:1;
+            color:burlywood;
+        }
+    }
+    </style>
+</head>
+<body style="overflow: scroll; overflow-x:hidden; overflow-y: hidden;">
+    <div class="box"></div>
+    <div class="loadingBox">
+        <span>loading...</span>
+    </div>
+
+    <script>
+        var Box = document.getElementsByClassName("loadingBox");
+        var span = document.getElementsByTagName("span");
+        function createspan (){
+            var p = document.createElement("p");
+            p.innerHTML = "______";
+            p.style.display = "block";
+            p.border = "1px solid red";
+            Box.appendChild(p);
+        }
+        Box.onmouseover = function (){
+            console.log("11111");
+            createspan();
+        }
+    </script>
+</body>
+</html>
