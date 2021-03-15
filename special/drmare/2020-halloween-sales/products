@@ -1,0 +1,29 @@
+[
+    {
+      productName: 'Spotify Music Converter',
+      title: 'Single License of Spotify Music Convert (180 Days)',
+      img: './images/interaction/award/Converter-for-Spotify-mac.png',
+      pid: {
+        mac: 50021,
+        win: 50020
+      }
+    },
+    {
+      productName: 'Tidal Music Converter',
+      title: 'Single License of Tidal Music Converter (180 Days)',
+      img: './images/interaction/award/tidal-box.png',
+      pid: {
+        mac: 50041,
+        win: 50040
+      }
+    },
+    {
+      productName: 'Audio Converter',
+      title: 'Single License of Audio Converter (180 Days)',
+      img: './images/interaction/award/drm-audio-box.png',
+      pid: {
+        mac: 50011,
+        win: 50010
+      }
+    }
+  ]

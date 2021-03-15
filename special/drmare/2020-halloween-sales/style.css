@@ -1,0 +1,1360 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+
+@-webkit-keyframes handon {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-15px, -15px);
+            transform: translate(-15px, -15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes handon {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-15px, -15px);
+            transform: translate(-15px, -15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+html, body {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+body {
+  overflow-x: hidden;
+  background: #000 url(./images/bg.jpg) no-repeat top center;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.header .navbar-toggle {
+  border-color: white;
+}
+
+.header .navbar-toggle span {
+  background-color: white;
+}
+
+.header .logo img {
+  filter: grayscale(1) brightness(5);
+  -webkit-filter: grayscale(1) brightness(5);
+}
+
+.header a {
+  color: white !important;
+}
+
+.header i {
+  filter: grayscale(1) brightness(5);
+  -webkit-filter: grayscale(1) brightness(5);
+}
+
+.halloween-2020 .header .nav > .nav-menu:hover > a,
+.halloween-2020 .header .nav > .nav-menu:hover > a:focus,
+.halloween-2020 .header .nav > .nav-menu:hover > a:hover {
+  background-color: #c1676a;
+}
+
+.special-fullbanner {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 140px;
+}
+
+.special-fullbanner h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.special-fullbanner h1 span {
+  display: none;
+}
+
+.special-fullbanner .img {
+  margin-top: 58px;
+  width: 942px;
+  max-width: 100%;
+  height: auto;
+}
+
+.special-fullbanner .end-time {
+  position: relative;
+  top: -56px;
+  width: 352px;
+  height: 40px;
+  background-color: #37c6b6;
+  line-height: 40px;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-size: 30px;
+  color: white;
+}
+
+.special-fullbanner .product-link {
+  height: 456px;
+  width: 100%;
+  position: relative;
+}
+
+.special-fullbanner .product-link .container {
+  height: 100%;
+}
+
+.special-fullbanner .product-link .link-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.special-fullbanner .product-link .smile-ghost {
+  background-image: url(./images/nav/smile.png);
+  bottom: 0;
+  -webkit-animation: smile 2.3s;
+          animation: smile 2.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.special-fullbanner .product-link .cry-ghost {
+  background-image: url(./images/nav/cry.png);
+  top: 0;
+  -webkit-animation: cry 1.8s;
+          animation: cry 1.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.special-fullbanner .product-link .item {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  padding: 0 15px;
+  float: left;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.special-fullbanner .product-link .item .content {
+  position: relative;
+  height: 100%;
+}
+
+.special-fullbanner .product-link .item .content a {
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 278px;
+  width: 100%;
+  padding: 105px 15px 0 15px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.special-fullbanner .product-link .item .content a img {
+  max-width: 100%;
+}
+
+.special-fullbanner .product-link .animation-delay-50 {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.special-fullbanner .product-link .animation-delay-100 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.special-fullbanner .product-link .animation-delay-150 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes cry {
+  form {
+    top: 0;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+@keyframes cry {
+  form {
+    top: 0;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+@-webkit-keyframes smile {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+
+@keyframes smile {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+
+.knock .title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.knock .title img {
+  max-width: 100%;
+}
+
+.knock .content {
+  width: 960px;
+  height: 790px;
+  margin: 0 auto;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-bottom: 100px;
+}
+
+.knock .content .tombstone {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-left: 20px;
+}
+
+.knock .content .mound {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -251.5px;
+  width: 467px;
+  height: 249px;
+}
+
+.knock .content .btn {
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -185px;
+  width: 314px;
+  height: 80px;
+  cursor: pointer;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+.knock .content .btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  opacity: .8;
+}
+
+.knock .content .hand {
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  position: absolute;
+  top: 50%;
+  margin-top: 18px;
+  left: 50%;
+  margin-left: 110px;
+  width: 146px;
+  height: 103px;
+  -webkit-animation: handon 1.2s ease-in-out infinite;
+          animation: handon 1.2s ease-in-out infinite;
+}
+
+.knock .content .ghost-hand {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  margin-left: -92px;
+  width: 121px;
+  height: 131px;
+  background-position: center top;
+}
+
+.knock .content .rule {
+  position: relative;
+  top: 25px;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  width: 186px;
+  height: 233px;
+  margin-left: 36px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .23s;
+  transition: all .23s;
+  -webkit-animation: rulerun 1.8s;
+          animation: rulerun 1.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.knock .content .rule img {
+  position: relative;
+  top: 59%;
+}
+
+.knock .content .rule:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@-webkit-keyframes rulerun {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@keyframes rulerun {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+.knock .content .close-wrap {
+  margin-bottom: 60px;
+}
+
+.knock .content .close-wrap .close {
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  display: block;
+  height: 32px;
+  width: 32px;
+  float: right;
+  background: url(./images/interaction/rules/x.png) no-repeat;
+}
+
+.knock .content .close-wrap .close:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.knock .content .close-wrap .close:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.knock .content .rule-detail {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -445px;
+  width: 890px;
+  height: 779px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(./images/interaction/rules/bg.png) no-repeat;
+  padding: 60px 100px;
+  color: #105c48;
+}
+
+.knock .content .rule-detail ol {
+  font-size: 22px;
+  line-height: 38px;
+}
+
+.knock .content .lucky {
+  display: none;
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  margin-left: -338px;
+  width: 676px;
+  height: 922px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(./images/interaction/award/bg.png) no-repeat;
+  padding: 365px 0 0 0;
+  text-align: center;
+}
+
+.knock .content .lucky .close-wrap {
+  position: absolute;
+  right: 0;
+  padding-right: 100px;
+  margin-bottom: 0;
+  margin-top: -30px;
+}
+
+.knock .content .lucky .award-box .img {
+  height: 215px;
+  margin-bottom: 36px;
+}
+
+.knock .content .lucky .award-box .img img {
+  max-height: 100%;
+}
+
+.knock .content .lucky .award-box h2 {
+  color: #605d3f;
+  font-size: 18px;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  margin-bottom: 36px;
+}
+
+.knock .content .lucky .award-box .select {
+  color: #605d3f;
+  font-size: 16px;
+}
+
+.knock .content .lucky .award-box .select p {
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+.knock .content .lucky .award-box .select .version {
+  margin-bottom: 60px;
+}
+
+.knock .content .lucky .award-box .select .version .check i {
+  background-image: url(./images/interaction/award/checked.png) !important;
+}
+
+.knock .content .lucky .award-box .select .version .mac {
+  display: inline-block;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  background-image: url(./images/interaction/award/mac.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  text-align: left;
+  margin-right: 66px;
+  color: #3e3232;
+  cursor: pointer;
+}
+
+.knock .content .lucky .award-box .select .version .mac i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(./images/interaction/award/non-check.png) no-repeat;
+  margin-right: 12px;
+}
+
+.knock .content .lucky .award-box .select .version .win {
+  display: inline-block;
+  width: 142px;
+  height: 30px;
+  background-image: url(./images/interaction/award/win-off-40.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  line-height: 30px;
+  text-align: left;
+  color: #3e3232;
+  cursor: pointer;
+}
+
+.knock .content .lucky .award-box .select .version .win i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(./images/interaction/award/non-check.png) no-repeat;
+  margin-right: 12px;
+}
+
+.knock .content .lucky .award-box .select form {
+  position: relative;
+  width: 450px;
+  height: 55px;
+  margin: 0 auto;
+}
+
+.knock .content .lucky .award-box .select form input {
+  float: left;
+  width: 335px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  border: none;
+  background-color: white;
+  border-radius: 12px 0 0 12px;
+  outline: none;
+  padding: 0;
+  padding-left: 20px;
+  color: #605d3f;
+  font-size: 16px;
+}
+
+.knock .content .lucky .award-box .select form button {
+  float: left;
+  width: 115px;
+  height: 100%;
+  background-color: #ee8a16;
+  line-height: 55px;
+  outline: none;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  color: white;
+  font-size: 26px;
+}
+
+.knock .content .lucky .success-box {
+  display: none;
+}
+
+.knock .content .lucky .success-box img {
+  height: 153px;
+  margin-top: 50px;
+  margin-bottom: 55px;
+}
+
+.knock .content .lucky .success-box p {
+  letter-spacing: 1px;
+  font-size: 18px;
+  color: #605d3f;
+}
+
+.knock .content .trick {
+  display: none;
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  margin-left: -338px;
+  width: 676px;
+  height: 922px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(./images/interaction/tricker/bg.png) no-repeat;
+  padding: 347px 90px 0 90px;
+  text-align: center;
+}
+
+.knock .content .trick .close-wrap {
+  margin-bottom: 25px;
+}
+
+.knock .content .trick img {
+  margin-bottom: 35px;
+}
+
+.knock .content .trick p {
+  text-align: left;
+  font-size: 18px;
+  color: #605d3f;
+  line-height: 36px;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+
+.knock .content .share {
+  display: none;
+  position: absolute;
+  top: 87px;
+  width: 667px;
+  height: 412px;
+  left: 50%;
+  margin-left: -355px;
+  background: url(./images/interaction/share/bg.png) no-repeat;
+  text-align: center;
+  padding: 0 80px;
+  padding-top: 45px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.knock .content .share .close-wrap {
+  margin-bottom: 25px;
+}
+
+.knock .content .share p {
+  text-align: left;
+  font-size: 18px;
+  color: #605d3f;
+  line-height: 36px;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+.knock .content .share .share-box .share-facebook {
+  margin-right: 40px;
+}
+
+.knock .content .share .share-box a {
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  display: inline-block;
+}
+
+.knock .content .share .share-box a:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.award {
+  margin-bottom: 110px;
+}
+
+.award .content {
+  width: 547px;
+  height: 38px;
+  background-color: #93ebd8;
+  margin: 0 auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.award .content .award-item {
+  height: 100%;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 38px;
+}
+
+.sp-prd h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sp-prd h2 img {
+  max-width: 100%;
+}
+
+.sp-prd .layout {
+  position: relative;
+}
+
+.sp-prd .content {
+  position: relative;
+  padding-bottom: 26px;
+  background: url(./images/module1/bg.png) no-repeat;
+}
+
+.sp-prd .content .img {
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  border-radius: 50px;
+  padding: 45px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sp-prd .content .img .img-content {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 30px 67px 65px 67px;
+  background: url(./images/module1/60-off.png) no-repeat center;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.sp-prd .content .img .img-content img {
+  max-width: 100%;
+}
+
+.sp-prd .content .img .price {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.sp-prd .content .img .price .price-before {
+  margin-right: 20px;
+  position: relative;
+  top: -2px;
+  text-decoration: line-through;
+  color: #858484;
+  font-size: 20px;
+}
+
+.sp-prd .content .img .price .price-now {
+  color: #105c48;
+  font-size: 36px;
+}
+
+.sp-prd .content .img .buy {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.sp-prd .content .img .buy a {
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  display: inline-block;
+  width: 174px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  color: white;
+  font-size: 24px;
+  background: url(./images/buy.png) no-repeat;
+  text-decoration: none;
+}
+
+.sp-prd .content .img .buy a img {
+  position: relative;
+  top: -2px;
+}
+
+.sp-prd .content .img .buy a span {
+  margin-left: 11px;
+}
+
+.sp-prd .content .img .buy a:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.sp-prd .content .img .buy .win {
+  margin-right: 20px;
+}
+
+.sp-prd .content .text {
+  padding-top: 90px;
+  position: absolute;
+  margin-left: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  padding-right: 75px;
+  color: #0e403d;
+}
+
+.sp-prd .content .text ul {
+  list-style-image: url(./images/dot.png);
+  padding-left: 20px;
+}
+
+.sp-prd .content .text ul li {
+  padding-left: 15px;
+  line-height: 48px;
+  font-size: 18px;
+}
+
+.sp-prd .content:after {
+  display: block;
+  clear: both;
+  content: "";
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.sp-prd-2 {
+  margin-top: 180px;
+}
+
+.sp-prd-2 h2 {
+  text-align: center;
+}
+
+.sp-prd-2 h2 img {
+  max-width: 100%;
+}
+
+.sp-prd-2 .content {
+  position: relative;
+  margin-top: 80px;
+  padding: 75px 40px 105px 40px;
+  font-size: 24px;
+  background: url(./images/module2/bg.png) no-repeat;
+}
+
+.sp-prd-2 .content .product-item {
+  width: 50%;
+  padding: 0 17px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.sp-prd-2 .content .product-item .product-content {
+  border-radius: 10px;
+  border: 9px solid #fff;
+  padding: 42px 25px;
+  background: #93ebd8;
+}
+
+.sp-prd-2 .content .product-item .product-content .img img {
+  max-width: 100%;
+}
+
+.sp-prd-2 .content .product-item .product-content h3 {
+  margin-top: 62px;
+  color: #393939;
+  font-size: 24px;
+}
+
+.sp-prd-2 .content .product-item .product-content h3 a {
+  color: #393939;
+  font-size: 24px;
+}
+
+.sp-prd-2 .content .product-item .product-content p {
+  margin-top: 26px;
+  height: 100px;
+  text-align: left;
+  font-size: 18px;
+  color: #393939;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+.sp-prd-2 .content .product-item .product-content .price .price-before {
+  text-decoration: line-through;
+  color: #858484;
+  font-size: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: -2px;
+}
+
+.sp-prd-2 .content .product-item .product-content .price .price-now {
+  color: #105c46;
+  font-size: 36px;
+}
+
+.sp-prd-2 .content .product-item .product-content .buy {
+  margin-top: 42px;
+  margin-bottom: 15px;
+}
+
+.sp-prd-2 .content .product-item .product-content .buy a {
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  display: inline-block;
+  width: 174px;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  background-image: url(./images/buy.png);
+}
+
+.sp-prd-2 .content .product-item .product-content .buy a img {
+  position: relative;
+  top: -2px;
+}
+
+.sp-prd-2 .content .product-item .product-content .buy a span {
+  margin-left: 11px;
+}
+
+.sp-prd-2 .content .product-item .product-content .buy .win {
+  margin-right: 60px;
+}
+
+.sp-prd-2 .content .product-item .product-content .buy .mac img {
+  position: relative;
+  top: -2px;
+}
+
+.sp-prd-2 .content .product-item .product-content .buy a:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.sp-prd-2 .content .off-30 {
+  background-image: url(./images/module2/30-off.png);
+}
+
+.sp-prd-2 .content .off-35 {
+  background-image: url(./images/module2/35-off.png);
+}
+
+.sp-prd-2 .content .off-40 {
+  background-image: url(./images/module2/40-off.png);
+}
+
+.sp-prd-3 {
+  margin-top: 150px;
+}
+
+.sp-prd-3 h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sp-prd-3 h2 img {
+  max-width: 100%;
+}
+
+.sp-prd-3 .content {
+  background: url(./images/module3/bg.png) no-repeat top center;
+  padding: 100px 135px 129px 135px;
+  text-align: center;
+  color: #105c48;
+}
+
+.sp-prd-3 .content p {
+  font-size: 28px;
+  line-height: 36px;
+  color: #105c48;
+  margin-bottom: 55px;
+}
+
+.sp-prd-3 .content .how-to {
+  background-color: white;
+  border-radius: 10px;
+  padding: 55px;
+  position: relative;
+}
+
+.sp-prd-3 .content .how-to h3 {
+  color: #105c48;
+  font-size: 28px;
+  margin-bottom: 55px;
+}
+
+.sp-prd-3 .content .how-to .icon {
+  margin-bottom: 55px;
+}
+
+.sp-prd-3 .content .how-to .icon .icon-item {
+  width: 33.333%;
+  float: left;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sp-prd-3 .content .how-to .icon .icon-item .img {
+  height: 80px;
+  margin-bottom: 35px;
+}
+
+.sp-prd-3 .content .how-to .icon .icon-item .img img {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sp-prd-3 .content .how-to .icon .icon-item p {
+  font-size: 18px;
+  line-height: 36px;
+  margin-bottom: 0;
+}
+
+.sp-prd-3 .content .how-to .partner {
+  margin-bottom: 55px;
+}
+
+.sp-prd-3 .content .how-to .partner .trustpilot {
+  margin-right: 90px;
+}
+
+.sp-prd-3 .content .how-to .rule p {
+  font-size: 18px;
+  line-height: 36px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.sp-prd-3 .content .how-to .rule ol {
+  text-align: left;
+  padding-left: 21px;
+}
+
+.sp-prd-3 .content .how-to .rule ol li {
+  color: #105c48;
+  line-height: 36px;
+  font-size: 18px;
+}
+
+.footer {
+  background-color: transparent !important;
+  margin-top: 55px;
+}
+
+.footer p {
+  color: white;
+}
+
+.footer a {
+  color: white;
+}
+
+.wow-you {
+  -webkit-animation: wowyou 0.8s ease-in-out forwards;
+          animation: wowyou 0.8s ease-in-out forwards;
+}
+
+@-webkit-keyframes wowyou {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes wowyou {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (max-width: 1222px) {
+  .special-fullbanner .product-link .item .content a {
+    padding-top: 89px;
+  }
+  .sp-prd .content {
+    background-size: 100% 100%;
+  }
+  .sp-prd .content .text {
+    padding-right: 50px;
+  }
+  .sp-prd .content .text ul li {
+    line-height: 36px;
+  }
+  .sp-prd-2 .content {
+    background-size: 100% 100%;
+  }
+  .sp-prd-2 .content .product-item .product-content .buy a {
+    margin-right: 0 !important;
+    margin-bottom: 15px;
+    float: none;
+  }
+  .sp-prd-2 .content .product-item .product-content .buy a:last-of-type {
+    margin-bottom: 0;
+  }
+  .sp-prd-3 .content {
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .special-fullbanner {
+    margin-bottom: 0;
+  }
+  .special-fullbanner .product-link .item {
+    padding: 0 5px !important;
+  }
+  .special-fullbanner .product-link .item .content a {
+    padding-top: 65px;
+  }
+  .knock .content {
+    width: 100%;
+  }
+  .knock .content .rule {
+    margin-left: -35px;
+    top: -15px;
+  }
+  .sp-prd .content {
+    background: none;
+    background-color: #93ebd8;
+    border-radius: 15px;
+  }
+  .sp-prd .content .layout {
+    padding: 90px 60px;
+  }
+  .sp-prd .content .img {
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 0;
+  }
+  .sp-prd .content .text {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .sp-prd-2 .content {
+    background: none;
+    background-color: #93ebd8;
+    border-radius: 15px;
+    padding: 110px 40px;
+  }
+  .sp-prd-2 .content .product-item {
+    width: 100%;
+  }
+  .sp-prd-3 .content {
+    padding: 100px 60px;
+    background: none;
+    background-color: #93ebd8;
+    border-radius: 15px;
+  }
+  .sp-prd-3 .content p {
+    font-size: 22px;
+  }
+  .sp-prd-3 .content .how-to .icon .icon-item p {
+    font-size: 16px;
+  }
+  .sp-prd-3 .content .how-to .rule p {
+    font-size: 16px;
+  }
+  .sp-prd-3 .content .how-to .rule ol li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 100% auto;
+  }
+  .special-fullbanner {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  .special-fullbanner .end-time {
+    position: static;
+    display: inline-block;
+    font-size: 15px;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    padding: 10px 15px;
+  }
+  .special-fullbanner .product-link {
+    display: none;
+    height: auto;
+  }
+  .special-fullbanner .product-link .item {
+    width: 100%;
+    padding: 0 !important;
+    float: none;
+    margin-bottom: 35px;
+  }
+  .special-fullbanner .product-link .item .content {
+    height: 278px;
+    margin: 0 auto !important;
+  }
+  .special-fullbanner .product-link .item .content a {
+    padding-top: 105px;
+    background-size: auto 100%;
+    background-position: center;
+  }
+  .knock .content {
+    background-size: 662px;
+    background-position: -124px bottom;
+  }
+  .knock .content .tombstone {
+    width: 660px;
+    max-width: none !important;
+    margin-left: 33px;
+  }
+  .knock .content .btn {
+    margin-top: 87px;
+    width: 200px;
+    height: 60px;
+    margin-left: -100px;
+  }
+  .knock .content .hand {
+    margin-top: 140px;
+    margin-left: 90px;
+  }
+  .knock .content .rule {
+    width: 120px;
+    height: auto;
+    top: 120px;
+  }
+  .knock .content .ghost-hand {
+    margin-left: -63px;
+  }
+  .knock .content .mound {
+    margin-left: -233.5px;
+    max-width: none !important;
+  }
+  .knock .content .trick {
+    background-position: center;
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    padding: 347px 30px 0 30px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .knock .content .lucky {
+    background-position: center;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
+  .knock .content .lucky form {
+    width: 90% !important;
+  }
+  .knock .content .lucky form input {
+    width: 80% !important;
+  }
+  .knock .content .lucky form button {
+    width: 20% !important;
+    font-size: 16px !important;
+  }
+  .knock .content .share {
+    background-position: center center;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    padding: 30px 30px;
+  }
+  .knock .content .share .share-box a {
+    margin-right: 0 !important;
+    margin-bottom: 15px;
+  }
+  .award .content {
+    width: 100%;
+  }
+  .award .content .award-item {
+    font-size: 14px;
+  }
+  .sp-prd .content .layout {
+    padding: 110px 20px;
+  }
+  .sp-prd .content .img {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 0;
+  }
+  .sp-prd .content .img .buy .win {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  .sp-prd .content .text {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .sp-prd .content .text ul li {
+    padding-left: 0;
+    font-size: 16px;
+  }
+  .sp-prd-2 .content {
+    padding: 110px 5px;
+  }
+  .sp-prd-2 .content .product-item {
+    width: 100%;
+  }
+  .sp-prd-2 .content .product-item .product-content {
+    padding: 25px 15px 0 15px;
+  }
+  .sp-prd-2 .content .product-item .product-content h3 {
+    font-size: 20px;
+  }
+  .sp-prd-2 .content .product-item .product-content p {
+    font-size: 16px;
+  }
+  .sp-prd-2 .content .product-item .product-content .buy {
+    margin-bottom: 20px;
+  }
+  .sp-prd-3 .content {
+    padding: 100px 15px;
+  }
+  .sp-prd-3 .content p {
+    font-size: 18px;
+  }
+  .sp-prd-3 .content .how-to {
+    padding: 30px 15px;
+  }
+  .sp-prd-3 .content .how-to .icon .icon-item {
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+  .sp-prd-3 .content .how-to .icon .icon-item p {
+    font-size: 16px;
+  }
+  .sp-prd-3 .content .how-to .partner a {
+    display: inline-block;
+    margin-right: 0 !important;
+    margin-bottom: 15px;
+  }
+  .sp-prd-3 .content .how-to .rule p {
+    margin-top: 0;
+  }
+  .sp-prd-3 .content .how-to .rule ol {
+    margin-top: 0;
+  }
+  .sp-prd-3 .content .how-to .rule ol li {
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.perloadimage {
+  width: 0px;
+  height: 0px;
+  display: inline;
+  background-image: url(./images/interaction/rules/bg.png);
+}
+/*# sourceMappingURL=style.css.map */
