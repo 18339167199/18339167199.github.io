@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyoshare web - 表单</title>
+  <!-- rev-hash -->
+  <link rel="stylesheet" href="assets/css/sample/form.css?v=5ff7c0e0ad2dfc87928043a4b50b8d49"/>
+  <!-- end -->
+</head>
+<body>
+  <h1 class="sample-main-title">表单</h1>
+  
+  <div class="main">
+
+  <!-- Form BEGIN -->
+  <form action="https://www.joyoshare.com" method="POST" class="jw-form" style="margin:50px;width:600px">
+    <div class="jw-form-item">
+      <label class="jw-form-label">输入框</label>
+      <div class="jw-input-block">
+        <input name="sex" type="text" placeholder="block-input">
+      </div>
+    </div>
+    <div class="jw-form-item">
+      <label class="jw-form-label">输入框</label>
+      <div class="jw-input-inline">
+        <input name="travel" type="text" placeholder="inline-input">
+      </div>
+      <div class="jw-input-text">辅助文字</div>
+    </div>
+    <div class="jw-form-item">
+      <label class="jw-form-label">选择框</label>
+      <div class="jw-input-block">
+        <input class="jw-form-select" type="text" readonly value="广州" placeholder="请选择">
+        <i class="jw-form-icon icon icon-xiala"></i>
+        <!-- 在 dl 中使用 multiple 属性可以让下拉框成为多选 -->
+        <dl name="city" multiple class="jw-form-select-content">
+          <dd jw-value="" class="jw-select-tips">请选择</dd>
+          <dd jw-value="shanghai">上海</dd>
+          <dd jw-value="beijing">北京</dd>
+          <dd jw-value="guangzhou" class="jw-selected">广州</dd>
+          <dd jw-value="hangzhou">杭州</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="jw-form-item">
+      <label class="jw-form-label">复选框</label>
+      <div class="jw-input-block">
+        <div class="jw-form-checkbox" name="hobby">
+          <div jw-value="write" class="jw-checkbox-item jw-checkbox-item-active">
+            <span>写作</span>
+            <i class="jw-form-icon icon icon-gou"></i>
+          </div>
+          <div jw-value="print" class="jw-checkbox-item">
+            <span>绘画</span>
+            <i class="jw-form-icon icon icon-gou"></i>
+          </div>
+          <div jw-value="swimming" class="jw-checkbox-item">
+            <span>游泳</span>
+            <i class="jw-form-icon icon icon-gou"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jw-form-item">
+      <label class="jw-form-label">开关</label>
+      <div class="jw-input-block">
+        <div name="switch" text="OFF/ON" class="jw-form-switch jw-form-switch-active">
+          <em>OFF</em>
+          <i></i>
+        </div>
+      </div>
+    </div>
+    <div class="jw-form-item">
+      <label class="jw-form-label">单选框</label>
+      <div class="jw-input-block">
+        <div name="gender" class="jw-form-radio">
+          <div jw-value="male" class="jw-form-radio-item jw-form-radio-active">
+            <i></i>
+            <span>男</span>
+          </div>
+          <div jw-value="female" class="jw-form-radio-item">
+            <i></i>
+            <span>女</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jw-form-item">
+      <label class="jw-form-label">文本域</label>
+      <div class="jw-input-block">
+        <textarea name="text"></textarea>
+      </div>
+    </div>
+    <div class="jw-form-item">
+      <label class="jw-form-label">按钮</label>
+      <div class="jw-input-block">
+        <button class="jw-btn primary">主要按钮</button>
+        <button class="jw-btn success">成功按钮</button>
+        <button class="jw-btn info">信息按钮</button>
+        <button class="jw-btn warning">警告按钮</button>
+        <button class="jw-btn danger">错误按钮</button>
+        <button class="jw-btn danger mini" style="margin-top:5px">mini按钮</button>
+      </div>
+    </div>
+  </form>
+  <!-- Form END -->
+
+  <div class="props-bg">
+    使用: <br>
+    scss: <br>
+    @import "joweb/src/scss/form"; <br><br>
+
+    js: <br>
+    var Form = require('lib/form'); <br>
+    Form.init();
+  </div>
+
+  </div>
+
+  <script>
+    window.jwLoadCallback = window.jwLoadCallback || [];
+    function joweb(){jwLoadCallback.push(arguments);}
+    // load config
+    joweb('config', 'Test string');
+    // load callback function
+    joweb(function(msg){
+      console.log('Hello callback, ' + msg);
+    }, 'Form');
+    joweb(function(){
+      joweb.Form.init();
+    });
+  </script>
+  <!-- rev-hash -->
+  <script async src="assets/js/sample.js?v=007fa1bb29057e15179cb384c12cf366"></script>
+  <!-- end -->
+</body>
+</html>

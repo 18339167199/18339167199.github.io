@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyoshare web - 轮播图</title>
+  <!-- rev-hash -->
+  <link rel="stylesheet" href="assets/css/sample/carousel.css?v=5e0c55d899ddcdf451ebe5a9b14d9cba" />
+  <!-- end -->
+</head>
+
+<body>
+  <h1 class="sample-main-title">轮播图</h1>
+
+  <div class="main">
+    <!-- Carousel BEGIN -->
+    <div class="jw-carousel" id="carousel">
+      <div class="jw-carousel-inner">
+        <div class="jw-carousel-item"><img src="./images/item/1.jpg" alt="item1"></div>
+        <div class="jw-carousel-item"><img src="./images/item/2.jpg" alt="item2"></div>
+        <div class="jw-carousel-item"><img src="./images/item/3.jpg" alt="item3"></div>
+      </div>
+      <ol class="jw-carousel-indicators">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+    <!-- Carousel END -->
+
+    <div class="props-bg" style="margin-top: 100px;">
+      使用: <br>
+      scss:  <br>
+      @import "joweb/src/sass/lib/carousel"; <br><br>
+      js: <br>
+      var Carousel = require('lib/carousel'); <br>
+      var carousel = new Carousel({ <br>
+      &nbsp;&nbsp;el: '.carousel' <br>
+      &nbsp;&nbsp;height: 750 <br>
+      &nbsp;&nbsp;width: 750 <br>
+      })
+      <br><br>
+      <table class="props-table">
+        <thead>
+          <tr>
+            <th>参数</th>
+            <th>默认</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nec">el (String)</td>
+            <td>无</td>
+            <td>元素选择器，以 # 或者 . 开头, 例如 '#app' 选择 id 为 app 的元素，以 . 开头, 例如 '.app', 则是选择document.getElementsByClassName('app')的第一个元素</td>
+          </tr>
+          <tr>
+            <td class="nec">height (Number / String)</td>
+            <td>500</td>
+            <td>轮播图的高度, 传入的数值为 Number 类型则单位为 (px), 也可以采用 String 类型， 例如 '100%', '50%'</td>
+          </tr>
+          <tr>
+            <td class="nec">width (Number /String)</td>
+            <td>'100%'</td>
+            <td>同 height</td>
+          </tr>
+          <tr>
+            <td>autoplay (Boolean)</td>
+            <td>true</td>
+            <td>是否自动轮播</td>
+          </tr>
+          <tr>
+            <td>interval (Number)</td>
+            <td>5000</td>
+            <td>轮播的时间间隔 (ms)</td>
+          </tr>
+          <tr>
+            <td>index (Number)</td>
+            <td>1</td>
+            <td>开始轮播的位置, 第一个轮播图单元为 1</td>
+          </tr>
+          <tr>
+            <td>duration (Number)</td>
+            <td>1000</td>
+            <td>轮播动画开始到结束的时间 (ms)</td>
+          </tr>
+          <tr>
+            <td>direction (String)</td>
+            <td>'right'</td>
+            <td>轮播的方向, 'left' / 'right'</td>
+          </tr>
+          <tr>
+            <td>hoverToStop (Boolean)</td>
+            <td>true</td>
+            <td>鼠标移入是否停止播放</td>
+          </tr>
+          <tr>
+            <td>createIndicators (Boolean)</td>
+            <td>true</td>
+            <td>是否自动生成指示器</td>
+          </tr>
+          <tr>
+            <td>indicators (HTMLElement)</td>
+            <td>无</td>
+            <td>当 createIndicators 为 false 时, 可以指定一个DOM元素为改轮播图的指示器, 当 createIndicators 为 true 时无效</td>
+          </tr>
+          <tr>
+            <td>indicatorsToggle (String)</td>
+            <td>'click'</td>
+            <td>指示器触发的方式, 'click': 点击切换轮播图, 'hover': hover切换轮播图</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script>
+    window.jwLoadCallback = window.jwLoadCallback || [];
+    function joweb() { jwLoadCallback.push(arguments); }
+    // load config
+    joweb('config', 'Test string');
+    // load callback function
+    joweb(function (msg) {
+      console.log('Hello callback, ' + msg);
+    }, 'Carousel');
+
+    function callback() {
+      console.log('callback');
+    }
+
+    joweb(function () {
+      var jwCarousel = new joweb.Carousel({
+        el: '#carousel', //挂载元素*
+        height: 500, //高度 默认：500px
+        width: '100%', //宽度 默认：'100%'
+        autoplay: false, //是否自动播放 默认：true
+        interval: 3500, //轮播时间 默认：5000
+        index: 1, //初始所在的位置 默认：1
+        duration: 600, //动画过渡时间 默认：1000
+        direction: 'right', //播放的方向 默认：'right'
+        hoverToStop: true, //鼠标移入停止播放 默认：true
+        callback: callback,  //每完成一次轮播回调函数 function
+        createIndicators: false,  //是否自动生成指示器 默认：true
+        indicators: ".jw-carousel-indicators",  //不自动生成指示器的时候需要指定自定义的指示器
+        indicatorsToggle: 'click' //指示器的触发方式 click/hover 默认：'click'
+      });
+    });
+  </script>
+  <!-- rev-hash -->
+  <script async src="assets/js/sample.js?v=007fa1bb29057e15179cb384c12cf366"></script>
+  <!-- end -->
+</body>
+
+</html>

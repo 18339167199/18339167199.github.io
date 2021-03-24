@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyoshare web - 3d-carousel</title>
+  <!-- rev-hash -->
+  <link rel="stylesheet" href="assets/css/sample/3d-carousel.css?v=abd2d0cdcb6dd5d5b9a7ed9b70f1b3ac"/>
+  <!-- end -->
+  <style>
+    img{
+      max-width: 70%;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="sample-main-title">立体轮播图</h1>
+  
+  <div class="main" style="padding-top: 50px;">
+
+    <div class="jw-3d-carousel">
+        <div class="jw-carousel-inner" style="height: 740px;">
+          <div class="jw-carousel-item">
+            <img src="./images/3d-carousel/media-cutter.png" alt="media cutter">
+            <h3>Media Cutter</h3>
+            <p>Lossless video cutter to trim and cut any videos fast without losing quality.</p>
+            <a href="video-cutter-win/">Learn more</a>
+          </div>
+          <div class="jw-carousel-item">
+            <img src="./images/3d-carousel/ios-repair-tool.png" alt="ios repair tool">
+            <h3>iOS System Recovery</h3>
+            <p>Fix any software-related issues on iDevice and Apple TVs with no data loss.</p>
+            <a href="ultfix/">Learn more</a>
+          </div>
+          <div class="jw-carousel-item">
+            <img src="./images/3d-carousel/screen-recorder.png" alt="screen recorder">
+            <h3>Screen Recorder</h3>
+            <p>Record ongoing desktop activities with no time limit, no lag and no watermark.</p>
+            <a href="screen-recorder-for-win/">Learn more</a>
+          </div>
+          <div class="jw-carousel-item">
+            <img src="./images/3d-carousel/screen-recorder.png" alt="screen recorder">
+            <h3>Screen Recorder</h3>
+            <p>Record ongoing desktop activities with no time limit, no lag and no watermark.</p>
+            <a href="screen-recorder-for-win/">Learn more</a>
+          </div>
+          <div class="jw-carousel-item">
+            <img src="./images/3d-carousel/screen-recorder.png" alt="screen recorder">
+            <h3>Screen Recorder</h3>
+            <p>Record ongoing desktop activities with no time limit, no lag and no watermark.</p>
+            <a href="screen-recorder-for-win/">Learn more</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="props-bg">
+      使用: <br>
+      scss: <br>
+      @import "joweb/src/scss/3d-carousel"; <br><br>
+
+      js: <br>
+      var ThreeDCarousel = require('lib/3d-carousel'); <br>
+      var threedcarousel = new ThreeDCarousel({ <br>
+      &nbsp;&nbsp;el: '.threedcarousel' <br>
+      &nbsp;&nbsp;offsetX: 350 <br>
+      })
+      <table class="props-table">
+        <thead>
+          <tr>
+            <th>参数</th>
+            <th>默认值</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nec">el (String)</td>
+            <td>无</td>
+            <td>元素选择器，以 # 或者 . 开头, 例如 '#app' 选择 id 为 app 的元素，以 . 开头, 例如 '.app', 则是选择document.getElementsByClassName('app')的第一个元素</td>
+          </tr>
+          <tr>
+            <td>autoplay (Boolean)</td>
+            <td>true</td>
+            <td>是否自动播放</td>
+          </tr>
+          <tr>
+            <td>hoverToShop (Boolean)</td>
+            <td>false</td>
+            <td>鼠标移入是否停止播放</td>
+          </tr>
+          <tr>
+            <td>offsetX (Number)</td>
+            <td>400</td>
+            <td>左边和右边的元素向左和向右偏移的距离</td>
+          </tr>
+          <tr>
+            <td>offsetZ (Number)</td>
+            <td>100</td>
+            <td>左边和右边的元素向左和向后偏移的距离</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script>
+    window.jwLoadCallback = window.jwLoadCallback || [];
+    function joweb(){jwLoadCallback.push(arguments);}
+    
+    // load config
+    joweb('config', 'Test string');
+
+    // load callback function
+    joweb(function(msg){
+      console.log('Hello callback, ' + msg);
+    }, 'Tooltips');
+
+    // Tooltips
+    joweb(function(){
+      var carousel = new joweb.ThreeDCarousel({
+        el: '.jw-3d-carousel',
+        index: 1,
+        interval: 3500,
+        duration: 250, // 动画时间，默认250
+        autoplay: false,
+        direction: 'right', //播放的方向 默认：'right'
+        hoverToShop: false,
+        offsetX: 350,
+        offsetZ: 200
+      })
+    });
+  </script>
+  <!-- rev-hash -->
+  <script async src="assets/js/sample.js?v=007fa1bb29057e15179cb384c12cf366"></script>
+  <!-- end -->
+</body>
+</html>

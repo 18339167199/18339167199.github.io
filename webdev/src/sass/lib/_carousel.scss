@@ -1,0 +1,134 @@
+// 轮播图组件
+.jw-carousel {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+
+  .jw-carousel-inner {
+    position: relative;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+
+    .jw-carousel-item {
+      position: absolute;
+      left: 33.3333%;
+      width: 33.3333%;
+      display: none;
+      height: 100%;
+      user-select: none;
+      overflow: hidden;
+      & * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;  
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+    }
+    .right {
+      display: block;
+      left: 66.6611%;
+    }
+    .left {
+      display: block;
+      left: 0%;
+    }
+    .active {
+      display: block;
+    }
+  }
+
+  .jw-carousel-indicators {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    bottom: 10px;
+    width: 60%;
+    margin-left: -30%;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      width: 10%;
+      height: 5px;
+      opacity: .5;
+      border-radius: 5px;
+      background-color: white;
+      cursor: pointer;
+      margin: 0 2px;
+    }
+    li:hover {
+      opacity: 1;
+    }
+
+    .active {
+      background-color: #2873ff
+    }
+  }
+
+  .btn {
+    position: absolute;
+    display: block;
+    width: 16%;
+    height: 100%;
+    top: 0;
+    opacity: .5;
+
+    span {
+      position: absolute;
+      top: 50%;
+      margin-top: -37.5px;
+      left: 50%;
+      margin-left: -14px;
+      display: inline-block;
+      width: 28px;
+      height: 75px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  .prev {
+    left: 0;
+
+    span {
+      background-image: url(#{$images-path}/carousel/prev.png);
+    }
+  }
+
+  .prev:hover {
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+    opacity: 1;
+  }
+
+  .next {
+    right: 0;
+
+    span {
+      background-image: url(#{$images-path}/carousel/next.png);
+    }
+  }
+
+  .next:hover {
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+    opacity: 1;
+  }
+
+}

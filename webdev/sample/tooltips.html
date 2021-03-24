@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyoshare web - tooltips</title>
+  <!-- rev-hash -->
+  <link rel="stylesheet" href="assets/css/sample/tooltips.css?v=abd2d0cdcb6dd5d5b9a7ed9b70f1b3ac"/>
+  <!-- end -->
+</head>
+<body>
+  <h1 class="sample-main-title">tooltips</h1>
+  
+  <div class="main">
+
+    <!-- Tooltips BEGIN -->
+    <!-- 
+      使用：class="tooltips"
+      data-content：指定内容
+      data-title：指定标题
+      data-toggle：指定弹出方式 click/hover
+      data-placement：弹出方向
+    -->
+    <div style="margin:20px 250px">
+      <div id="tool" class="jw-tooltips" data-content="这是提示框" data-toggle="hover" data-placement="left" data-title="title">
+        <button>hover left</button>
+      </div>
+      <div class="jw-tooltips" data-content="这是提示框" data-toggle="click" data-placement="top" data-title="title">
+        <button>click top</button>
+      </div>
+      <div class="jw-tooltips" data-content="这是提示框" data-toggle="hover" data-placement="right" data-title="title">
+        <button>hover right</button>
+      </div>
+      <div class="jw-tooltips" data-content="这是提示框" data-toggle="click" data-placement="bottom" data-title="title">
+        <button>click bottom</button>
+      </div>
+    </div>
+    <!-- Tooltips END -->
+
+    <div class="props-bg" style="margin-top: 100px;">
+      使用: <br>
+      scss: <br>
+      @import "joweb/src/scss/tooltips"; <br><br>
+  
+      js: <br>
+      var Tooltips = require('lib/tooltips'); <br>
+      var tooltips = new Tooltips() <br><br>
+
+      根据 HTML 标签上的属性初始化 <br>
+      &lt;div class="jw-tooltips" data-content="内容" data-title="标题" data-toggle="激活的方式, click / hover" data-placement="弹出的位置, left / right / top / bottom"&gt; <br>
+      &lt;/div&gt;
+      
+      <br><br>
+      <table class="props-table">
+        <thead>
+          <tr>
+            <th>参数</th>
+            <th>默认</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nec">el (String)</td>
+            <td>无</td>
+            <td>
+              不传入改参数时, 自动获取 所有 class 为 'jw-tooltips' 的元素初始化 <br>
+              元素选择器，以 # 或者 . 开头, 例如 '#app' 选择 id 为 app 的元素，以 . 开头, 例如 '.app', 则是选择document.getElementsByClassName('app')的第一个元素</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script>
+    window.jwLoadCallback = window.jwLoadCallback || [];
+    function joweb(){jwLoadCallback.push(arguments);}
+    
+    // load config
+    joweb('config', 'Test string');
+
+    // load callback function
+    joweb(function(msg){
+      console.log('Hello callback, ' + msg);
+    }, 'Tooltips');
+
+    // Tooltips
+    joweb(function(){
+      var tooltips = new joweb.Tooltips();
+    });
+  </script>
+  <!-- rev-hash -->
+  <script async src="assets/js/sample.js?v=007fa1bb29057e15179cb384c12cf366"></script>
+  <!-- end -->
+</body>
+</html>

@@ -5,25 +5,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello world</title>
+  <!-- rev-hash -->
+  <link rel="stylesheet" href="assets/css/home.css">
+  <!-- end -->
 </head>
 <body>
-  <ul>
-    <li><a href="/special/audfree/black-friday">audfree/black-friday</a></li>
-    <li><a href="/special/audfree/xmas-sales">audfree/xmas-sales</a></li>
-    <li><a href="/special/audkit/thanksgiving-sales">audkit/thanksgiving-sales</a></li>
-    <li><a href="special/audkit/xmas-sales">audkit/xmas-sales</a></li>
-    <li><a href="/special/drmare/2020-halloween-sales">drmare/2020-halloween-sales</a></li>
-    <li><a href="/special/drmare/thanksgiving-sales">drmare/thanksgiving-sales</a></li>
-    <li><a href="/special/drmare/xmas-sales">drmare/xmas-sales</a></li>
-    <li><a href="/special/joyoshare/2020-summer">joyoshare/2020-summer</a></li>
-    <li><a href="/special/joyoshare/thanksgiving-sales">joyoshare/thanksgiving-sales</a></li>
-    <li><a href="/special/joyoshare/xmas-sales">joyoshare/xmas-sales</a></li>
-    <li><a href="/special/tunelf/2020-halloween-sales">tunelf/2020-halloween-sales</a></li>
-    <li><a href="/special/tunelf/thanksgiving-sales">tunelf/thanksgiving-sales</a></li>
-    <li><a href="/special/tunelf/xmas-sales">tunelf/xmas-sales</a></li>
-    <li><a href="/special/tuneskit/2020-halloween-sales">tuneskit/2020-halloween-sales</a></li>
-    <li><a href="/special/tuneskit/thanksgiving-sales">tuneskit/thanksgiving-sales</a></li>
-    <li><a href="/special/tuneskit/xmas-sales">tuneskit/xmas-sales</a></li>
-  </ul>
+  <div class="home">
+    <ul>
+      <li><a href="/special/audfree/black-friday">audfree/black-friday</a></li>
+      <li><a href="/special/audfree/xmas-sales">audfree/xmas-sales</a></li>
+      <li><a href="/special/audkit/thanksgiving-sales">audkit/thanksgiving-sales</a></li>
+      <li><a href="special/audkit/xmas-sales">audkit/xmas-sales</a></li>
+      <li><a href="/special/drmare/2020-halloween-sales">drmare/2020-halloween-sales</a></li>
+      <li><a href="/special/drmare/thanksgiving-sales">drmare/thanksgiving-sales</a></li>
+      <li><a href="/special/drmare/xmas-sales">drmare/xmas-sales</a></li>
+      <li><a href="/special/joyoshare/2020-summer">joyoshare/2020-summer</a></li>
+      <li><a href="/special/joyoshare/thanksgiving-sales">joyoshare/thanksgiving-sales</a></li>
+      <li><a href="/special/joyoshare/xmas-sales">joyoshare/xmas-sales</a></li>
+      <li><a href="/special/tunelf/2020-halloween-sales">tunelf/2020-halloween-sales</a></li>
+      <li><a href="/special/tunelf/thanksgiving-sales">tunelf/thanksgiving-sales</a></li>
+      <li><a href="/special/tunelf/xmas-sales">tunelf/xmas-sales</a></li>
+      <li><a href="/special/tuneskit/2020-halloween-sales">tuneskit/2020-halloween-sales</a></li>
+      <li><a href="/special/tuneskit/thanksgiving-sales">tuneskit/thanksgiving-sales</a></li>
+      <li><a href="/special/tuneskit/xmas-sales">tuneskit/xmas-sales</a></li>
+    </ul>
+  </div>
 </body>
+
+<script>
+  window.jwLoadCallback = window.jwLoadCallback || [];
+  function joweb(){jwLoadCallback.push(arguments);}
+  
+  // load config
+  joweb('config', 'Test string');
+
+  // load callback function
+  joweb(function(msg){
+    console.log('Hello callback, ' + msg);
+  }, 'Tooltips');
+  
+</script>
+<!-- rev-hash -->
+<script async src="./assets/js/home.js"></script>
+<!-- end -->
 </html>
