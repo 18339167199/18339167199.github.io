@@ -1,11 +1,15 @@
-@import './common';
+@import 'common';
+@import 'lib/underline';
 
-$text-color: #fff;
+$margin-bottom-gap: 35px;
+
+$text-404-size: 215px;
+$text-not-found-size: 50px;
 
 body, html {
   margin: 0;
   height: 100%;
-  background-color: $background-color;
+  background-color: $background-light-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,13 +22,89 @@ p {
   margin-bottom: 0;
   &.text-404 {
     font-weight: 800;
-    font-size: 215px;
+    font-size: $text-404-size;
+    line-height: $text-404-size;
     letter-spacing: 20px;
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: $margin-bottom-gap;
   }
   &.text-not-found {
-    font-size: 50px;
-    
+    font-size: $text-not-found-size;
+    margin-bottom: $margin-bottom-gap;
+  }
+}
+
+.back-home {
+  position: relative;
+  box-shadow: 0 0 32px 0 rgba(#2b2b2b, 0.2);
+  background: $background-color;
+  background: linear-gradient(-45deg, transparent 50%, $background-color 50%, $background-light-color 100%);
+  display: block;
+  padding: 20px 35px;
+  border-radius: 35px;
+  color: $text-color;
+  font-size: 25px;
+  text-decoration: none;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 20px;
+    height: 18px;
+    background: url(../../images/404/pacman.png) no-repeat center center;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    opacity: 0;
+    // transform: rotateY(180deg);
+    // transition: all .5s;
+  }
+  &:hover {
+    transition: all .25s;
+    transform: scale(1.02);
+    text-decoration: none;
+    &:after {
+      opacity: 1;
+      top: -22px;
+      transition: all .1s;
+      animation: move-over 3s linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      transform-origin: 10px center;
+    }
+  }
+}
+
+@keyframes move-over {
+  0% {
+    left: 20px;
+  }
+  90% {
+    left: 200px;
+    transform: rotateY(0deg);
+  }
+  100% {
+    left: 200px;
+    transform: rotateY(180deg);
+  }
+}
+
+.nav {
+  padding-top: 100px;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 18px;
+      &:last-of-type { margin-right: none; }
+      a {
+        font-size: 18px;
+        @include underline($link-color, 1px);
+      }
+    }
   }
 }

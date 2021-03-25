@@ -1,0 +1,20 @@
+@mixin underline ($line-color, $line-width) {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  &:after {
+    content: '';
+    transition: all .25s;
+    position: absolute;
+    bottom: -1px;
+    width: 0;
+    height: 0;
+    left: 50%;
+    margin-left: -10px;
+    border-bottom: $line-width solid $line-color; 
+  }
+  &:hover:after {
+    width: 100%;
+    margin-left: -50%;
+  }
+}
