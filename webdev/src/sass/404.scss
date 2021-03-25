@@ -1,0 +1,30 @@
+@import './common';
+
+$text-color: #fff;
+
+body, html {
+  margin: 0;
+  height: 100%;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  color: $text-color;
+  margin-top: 0;
+  margin-bottom: 0;
+  &.text-404 {
+    font-weight: 800;
+    font-size: 215px;
+    letter-spacing: 20px;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+  &.text-not-found {
+    font-size: 50px;
+    
+  }
+}
