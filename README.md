@@ -1,9 +1,9 @@
 ## after clone finished, enter the root dir start a new terminal
 ## follow the following commands step by step
 
-## cd webdev
-## npm install
-## gulp
+- cd webdev
+- npm install
+- gulp
 
 ------------------------------------------------------------
 
