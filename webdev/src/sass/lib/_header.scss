@@ -72,6 +72,7 @@ $prefix-name: lm-header;
   &-menu {
     float: right;
     height: 100%;
+    transition: all .25s;
     ul {
       list-style: none;
       height: 100%;
@@ -109,13 +110,13 @@ $prefix-name: lm-header;
     }
 
     &-menu {
-      display: none;
+      height: 0;
+      overflow: hidden;
       float: none;
       width: 100vw;
       margin-top: $headerH;
       position: absolute;
       left: 0;
-      height: auto;
       background-color: $background-color;
       ul {
         height: auto;
