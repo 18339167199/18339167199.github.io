@@ -17,11 +17,11 @@
 
 - fonts
 - images
-- js
-  |_ lib
-  |_ other file
-- sass
-  |_ lib
-  |_ other file
+- js <br/>
+  |_ lib  <br/>
+  |_ other file <br/>
+- sass <br/>
+  |_ lib <br/>
+  |_ other file <br/>
   
 * only the javascript file in directory /webdev/src/js/ will pack to /assets/js/, more deeper directory like /webdev/src/js/lib/ will not pack
