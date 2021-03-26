@@ -401,7 +401,12 @@ a {
 }
 
 
-// ul and ol list element delete default margin-top
+// ul and ol list element remove default margin-top
 ul, ol {
   margin-top: 0;
+}
+
+// figure remove default margin
+figure {
+  margin: 0;
 }
