@@ -48,7 +48,7 @@ $prefix-name: lm-header;
     border: 1px solid #2b2b2b;
     border-radius: 4px;
     background-color: #fff;
-    padding-top: ($header-collapse-size - (3 * $header-collapse-single-width + 8)) / 2;
+    padding-top: ($header-collapse-size - (3 * $header-collapse-single-width + 10)) / 2;
     &:hover {
       transition: all .25s;
       background: $background-color;
@@ -72,7 +72,6 @@ $prefix-name: lm-header;
   &-menu {
     float: right;
     height: 100%;
-    transition: all .25s;
     ul {
       list-style: none;
       height: 100%;
@@ -136,6 +135,7 @@ $prefix-name: lm-header;
 
     &-collapse {
       display: block;
+      transition: all .25s;
     }
   }
 }
