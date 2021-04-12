@@ -2,3 +2,39 @@
 
 // header
 @import 'lib/header';
+
+$prefix: lm;
+
+$bg-color-right: #eb7347;
+$bg-color-left: linear-gradient(45deg, #fff1eb, #ace0f9);
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.#{$prefix} {
+
+  &-home {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: $headerH;
+    display: flex;
+  }
+
+  &-nav {
+    width: 50%;
+    height: 100%;
+    background: $bg-color-left;
+  }
+
+  &-introduction {
+    width: 50%;
+    height: 100%;
+    background: $bg-color-right;
+  }
+
+}

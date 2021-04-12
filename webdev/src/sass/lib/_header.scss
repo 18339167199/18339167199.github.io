@@ -11,15 +11,24 @@ $header-menu-size: 18px;
 $header-collapse-size: 30px;
 // 小屏按钮中每一个1横条的高度
 $header-collapse-single-width: 2px;
+// z-index
+$header-z-index: 9999999;
 
 $prefix-name: lm-header;
 
 .#{$prefix-name} {
 
   & {
-    height: $headerH;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $header-z-index;
+    width: 100%;
+    height: $headerH;  //border-bottom 1px
     background: $header-bg-color;
-    border-bottom: 1px solid $background-light-color;
+    // height: $headerH + 1px;
+    // border-bottom: 1px solid $background-light-color;
 
     & .container {
       position: relative;
@@ -74,10 +83,11 @@ $prefix-name: lm-header;
     height: 100%;
     ul {
       list-style: none;
-      height: 100%;
+      // height: 100%;
       line-height: $headerH;
       margin-bottom: 0;
       padding-left: 15px;
+      height: $headerH;
       li {
         height: 100%;
         float: left;
