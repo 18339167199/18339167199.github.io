@@ -1,0 +1,77 @@
+@import '../common';
+
+$header-height: 80px;
+
+$gap: 20px;
+
+$border-radius: 5px;
+
+$nav-width: 220px;
+
+$box-shadow: 0 0 25px 0px rgba($background-color, .2);
+
+$border-color: #ededed;
+$prefix: lmc;
+
+.#{$prefix} {
+  &-header {
+    height: $header-height;
+    text-align: center;
+    line-height: $header-height;
+    border-bottom: 2px solid $border-color;
+    background: rgba($background-color, .8);
+    margin-bottom: $gap;
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 800;
+      color: #fff;
+      font-family:'Courier New', Courier, monospace;
+    }
+  }
+
+  &-main {
+    margin-bottom: $gap;
+    &-box {
+      position: relative;
+      // border: 1px solid $border-color;  
+      min-height: calc(100vh - #{$header-height} - #{$gap});
+    }
+
+    &-content {
+      position: absolute;
+      width: calc(100% - #{$nav-width});
+      height: 100%;
+      margin-left: $nav-width;
+      height: 100%;
+      top: 0;
+      padding-left: $gap;
+      .code {
+        box-shadow: $box-shadow;
+        height: 100%;
+        background: rgba($background-color, .4);
+        border-radius: $border-radius;
+      }
+    }
+
+    &-nav {
+      box-shadow: $box-shadow;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $nav-width;
+      height: 100%;
+      background: rgba($background-color, .4);
+      border-radius: $border-radius;
+      padding: 10px;
+
+      h2 {
+        line-height: 40px;
+        text-align: left;
+        font-size: 22px;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}
