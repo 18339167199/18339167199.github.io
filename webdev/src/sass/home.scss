@@ -1,10 +1,11 @@
 @import 'common';
 
 // header
-@import 'lib/header';
+@import './lib/header';
+@import './lib/icon';
 
 $prefix: lm;
-
+// #ace0f9
 $bg-color-right: #ace0f9;
 $bg-color-left: #fff;
 
@@ -168,6 +169,197 @@ body, html {
           }
         }
       }
+    }
+  }
+
+}
+
+
+
+/* timeline */
+$text-size: 16px;
+$text-color: rgba(0, 0 ,0, .87);
+
+$title-size: 22px;
+$title-color: #fff; 
+
+$tag-bg-color: #66bb6a;
+
+// 左边和右边距离中间的间隔
+$gap-middle: 50px;
+
+$line-color: #fff;
+$line-size: 2px;
+
+$ball-width: 50px;
+
+.#{$prefix} {
+
+  &-timeline-box {
+    width: 90%;
+    padding: 35px 15px;
+    // background: #010101;
+    border-top: $line-size solid $line-color;
+
+    .timeline-item {
+      display: flex;
+      justify-content: center;
+      &:last-of-type {
+        .left, .right {
+          padding-bottom: 35px;
+        }
+      }
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+        overflow: hidden;
+      }
+      &:before {
+
+      }
+      &:hover {
+
+      }
+
+
+      .left, .right {
+        float: left;
+        width: 50%;
+        color: $text-color;
+        padding-top: 35px;
+        padding-bottom: 20px;
+      }
+
+      .left {
+        @if ($line-size != 1px) {
+          border-right: $line-size/2 solid $line-color;
+        }
+        .time-tag {
+          margin-right: calc(16px + #{$gap-middle});
+          float: right;
+          &:before {
+            border-left: 16px solid $tag-bg-color;
+            right: 0;
+            transform: translateY(-50%) translateX(100%);
+          }
+        }
+        .experience {
+          padding-right: $gap-middle;
+          text-align: right;
+        }
+      }
+
+      .right {
+        position: relative;
+        @if ($line-size == 1px) {
+          border-left: 1px solid $line-color;
+        } @else {
+          border-left: $line-size/2 solid $line-color;
+        }
+
+        .time-tag {
+          margin-left: calc(16px + #{$gap-middle});
+          float: left;
+          &::before {
+            border-right: 16px solid $tag-bg-color;
+            left: 0;
+            transform: translateY(-50%) translateX(-100%);
+          }
+        }
+        .experience {
+          padding-left: $gap-middle;
+          text-align: left;
+        }
+      }
+
+      // 时间标签
+      .time-tag {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: $tag-bg-color;
+        &:before {
+          position: absolute;
+          top: 50%;
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+      }
+
+      // 内容文字
+      .experience {
+        .title {
+          display: block;
+          padding: 10px 16px;
+          font-size: $title-size;
+          margin-top: 0;
+          margin-bottom: 0;
+          border-radius: 5px 5px 0 0;
+          background-color: $tag-bg-color;
+          color: $title-color;
+          font-family: Arial, Helvetica, sans-serif;
+          // border: 1px solid #e0e0e0;
+        }
+        .content {
+          background: #fff;
+          line-height: 150%;
+          font-size: 16px;
+          font-weight: 100;
+          margin: 0;
+          border-radius: 0 0 5px 5px;
+          padding: 0 10px 10px 10px;
+          border: 1px solid #e0e0e0;
+          border-top: none;
+        }
+      }
+
+      // 圆球
+      .right:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: $ball-width;
+        height: $ball-width;
+        border-radius: 50%;
+        background-color: darkcyan;
+        top: calc(35px - (#{$ball-width} - 38px) / 2);
+        left: -($ball-width/2) - ($line-size/2);
+        border: 2px solid #fff;
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      // icon 定义
+      $icon-path: '../../images/icon';
+      $icon-list: 'graduate', 'practice', 'school', 'work';
+      @mixin icon($className, $iconName, $iconSize) {
+        &.#{$className} { .right { &:after { background-image: url(#{$icon-path}/#{$iconName}); background-size: $iconSize $iconSize; } } }
+      };
+      @each $icon in $icon-list {
+        @include icon($icon, $icon + '.svg', 30);
+      };
+
+      // 颜色设置
+      $color-list: #e57373, #8e24aa, #66bb6a, #3f51b5, #2196f3, #607d8b;
+      @mixin color($index, $color) {
+        &:nth-child(#{$index}) {
+          .right:after { background-color: $color; }
+          .experience .title { background-color: $color; }
+        }
+      };
+      @each $color in $color-list {
+        $i: index($color-list, $color);
+        @include color($i, $color);
+      }
+
+
     }
   }
 
