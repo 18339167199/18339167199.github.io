@@ -1,0 +1,9 @@
+@keyframes shake {
+  10% { transform: rotate(3deg); }
+  20% { transform: rotate(-3deg); }
+  30% { transform: rotate(3deg); }
+  40% { transform: rotate(-3deg); }
+  30% { transform: rotate(3deg); }
+  60% { transform: rotate(-3deg); }
+  0%, 100% { transform: rptate(0deg); }
+}
