@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="Shortcut Icon" href="../../images/drmare.ico" />
   <link rel="Bookmark" href="../../images/drmare.ico" />
-  <link rel="canonical" href="https://www.drmare.com/special/2020-halloween-sales/" />
+  <link rel="canonical" href="https:///special/2020-halloween-sales/" />
   <script>
     function preload() {
       var imgs = arguments[0];
@@ -181,11 +181,11 @@
               and get one more chance to knock.</p>
             <div class="share-box">
               <a class="share-facebook" href="javascript:void(0)"
-                onclick="shareFacebook('https://www.drmare.com/special/2020-halloween-sales/', 'Join DRmare 2020 Halloween Sales - Up to 60% off special offers. Time is limited. Go for a multimedia tool you desire and save a lot.');"><img
+                onclick="shareFacebook('https:///special/2020-halloween-sales/', 'Join DRmare 2020 Halloween Sales - Up to 60% off special offers. Time is limited. Go for a multimedia tool you desire and save a lot.');"><img
                   src="./images/interaction/share/facebook.png" ga-type="special" ga-ec="2020Halloween"
                   ga-ea="share-facebook" alt="share facebook"></a>
               <a class="share-twitter" href="javascript:void(0)"
-                onclick="shareTwitter('https://www.drmare.com/special/2020-halloween-sales/', 'Join DRmare 2020 Halloween Sales - Up to 60% off special offers. Time is limited. Go for a multimedia tool you desire and save a lot.');"><img
+                onclick="shareTwitter('https:///special/2020-halloween-sales/', 'Join DRmare 2020 Halloween Sales - Up to 60% off special offers. Time is limited. Go for a multimedia tool you desire and save a lot.');"><img
                   src="./images/interaction/share/twitter.png" ga-type="special" ga-ec="2020Halloween"
                   ga-ea="share-twitter" alt="share twitter"></a>
             </div>
@@ -746,7 +746,7 @@
 
     function treat(pid, email, share_type, callback) {
       var ga_cid = getMyCookie('_ga');
-      $.post('https://www.drmare.com/api/share/coupon',
+      $.post('https:///api/share/coupon',
         { email: email, name: 'drmare-2020-halloween', share_type: share_type, ga_cid: ga_cid, code: pid },
         function (response) {
           if (response.status == true) {
@@ -963,7 +963,7 @@
           var $submit = $that.find('.submit');
           $submit.text('Loading...');
           
-          $.post('https://www.drmare.com/api/share/coupon', 
+          $.post('https:///api/share/coupon', 
             {email: email, name: 'drmare-halloween-2020', share_type: share_type, ga_cid: ga_cid}, 
             function(response){
               $that.removeAttr('data-loading').text('Submit');

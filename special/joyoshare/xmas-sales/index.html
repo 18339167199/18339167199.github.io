@@ -187,19 +187,19 @@
                 toolkit!</p>
               <div class="share">
                 <div class="share-div">
-                  <a onclick='shareTwitter("https://www.joyoshare.com/special/xmas-sales/", "Play lucky draw to win a $100 Starbucks voucher, free license, coupon, and more gifts in Joyoshare 2020 Xmas Special Offer. Time&apos;s limited! Join it from now to Jan.08, 2021.");'
+                  <a onclick='shareTwitter("https:///special/xmas-sales/", "Play lucky draw to win a $100 Starbucks voucher, free license, coupon, and more gifts in Joyoshare 2020 Xmas Special Offer. Time&apos;s limited! Join it from now to Jan.08, 2021.");'
                     href="javascript:void(0)">
                     <img width="120" height="38" class="lazyload" 
                       src="./images/module2-2/twitter.png" ga-type="special" ga-ec="2020Xmas" ga-ea="share-twitter"
                       alt="share with twitter">
                   </a>
-                  <a onclick='shareFacebook("https://www.joyoshare.com/special/xmas-sales/", "Play lucky draw to win a $100 Starbucks voucher, free license, coupon, and more gifts in Joyoshare 2020 Xmas Special Offer. Time&apos;s limited! Join it from now to Jan.08, 2021.");'
+                  <a onclick='shareFacebook("https:///special/xmas-sales/", "Play lucky draw to win a $100 Starbucks voucher, free license, coupon, and more gifts in Joyoshare 2020 Xmas Special Offer. Time&apos;s limited! Join it from now to Jan.08, 2021.");'
                     href="javascript:void(0)">
                     <img width="120" height="38" class="lazyload" 
                       src="./images/module2-2/facebook.png" ga-type="special" ga-ec="2020Xmas"
                       ga-ea="share-facebook" alt="share with facebook">
                   </a>
-                  <a onclick='sharePinterest("https://www.joyoshare.com/special/xmas-sales/?utm_source=Pinterest&amp;utm_medium=social&amp;utm_campaign=joyoshare_20220_xmas&amp;utm_content=share","Play lucky draw to win a $100 Starbucks voucher, free license, coupon, and more gifts in Joyoshare 2020 Xmas Special Offer. Time&apos;s limited! Join it from now to Jan.08, 2021.", "https://www.joyoshare.com/special/xmas-sales/images/share.jpg");'
+                  <a onclick='sharePinterest("https:///special/xmas-sales/?utm_source=Pinterest&amp;utm_medium=social&amp;utm_campaign=joyoshare_20220_xmas&amp;utm_content=share","Play lucky draw to win a $100 Starbucks voucher, free license, coupon, and more gifts in Joyoshare 2020 Xmas Special Offer. Time&apos;s limited! Join it from now to Jan.08, 2021.", "https:///special/xmas-sales/images/share.jpg");'
                     href="javascript:void(0)">
                     <img width="122" height="39" class="lazyload" 
                       src="./images/module2-2/P.png" ga-type="special" ga-ec="2020Xmas" ga-ea="share-pinterest"
@@ -340,7 +340,7 @@
             <div class="verification-img">
               <a href="javascript:void(0)" id="verification-box" title="click to change the verification code">
                 <!-- <img class="lazyload" 
-                  src="https://www.joyoshare.com/api/share/verify" alt="verification code"> -->
+                  src="https:///api/share/verify" alt="verification code"> -->
               </a>
             </div>
           </div>
@@ -794,7 +794,7 @@
     function verificationCodeChange() {
       verificationBox.innerHTML = '';
       var img = new Image();
-      img.src = 'https://www.joyoshare.com/api/share/verify';
+      img.src = 'https:///api/share/verify';
       verificationBox.appendChild(img);
     }
     verificationBox.onclick = verificationCodeChange;
@@ -820,7 +820,7 @@
 
       joweb.Request.ajax({
         method: 'post',
-        url: 'https://www.joyoshare.com/api/share/coupon',
+        url: 'https:///api/share/coupon',
         data: {
           email: email,
           name: 'joyoshare-xmas-2020-lucky',
@@ -872,7 +872,7 @@
 
       joweb.Request.ajax({
         method: 'post',
-        url: 'https://www.joyoshare.com/api/share/coupon',
+        url: 'https:///api/share/coupon',
         data: {
           email: email,
           name: 'joyoshare-xmas-2020-lucky',
@@ -931,7 +931,7 @@
 
       joweb.Request.ajax({
         method: 'post',
-        url: 'https://www.joyoshare.com/api/share/coupon',
+        url: 'https:///api/share/coupon',
         data: {
           email: email,
           name: 'joyoshare-xmas-2020-vidiKit',
@@ -1024,7 +1024,7 @@
       pointer.setAttribute('data-post', 'true');
       joweb.Request.ajax({
         method: 'get',
-        url: 'https://www.joyoshare.com/api/special/lottery?name=joyoshare-xmas-2020-lucky',
+        url: 'https:///api/special/lottery?name=joyoshare-xmas-2020-lucky',
         success: function (data) {
           data = JSON.parse(data);
           if (data.status) {
